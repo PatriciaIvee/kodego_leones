@@ -1,4 +1,5 @@
 package exercise_1
 
-class main {
+fun main() {
+
 }
