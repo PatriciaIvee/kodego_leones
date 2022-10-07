@@ -47,4 +47,5 @@ fun main() {
     var totalRecordings : Int
     var totalScore : Int
     var event : String
+    var dueDate : Date
 }
