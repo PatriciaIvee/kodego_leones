@@ -3,52 +3,54 @@ package exercise_1
 import java.util.Date
 
 fun main() {
-        val title : String = "****** Application for Employment ******"
-        var jobPosition : String = "CEO of KodeGo"
-        var desireSalary : Double = 1_000_000.00
-        var workDateAvailability = Date(2023, 1 ,20)
-        val personalInformation : String = "*** Personal Information ******"
-        var lastName : String = "Leones"
-        var firstName : String = "Patricia Ivee"
-        var middleName : String  = "Leones"
-        var birthDate = Date(1999, 1, 22)
-        var age : Int = 25
-        var gender : String = "Female"
-        var address: String = "#1 Guyabano St., X Village"
-        var city : String = "Taguig"
-        var state : String = "Metro Manila"
-        var zipCode : Int = 1630
-        var homePhone : Int = 87000
-        var cellPhone: Long = 12345678912L
-        var email : String = "patriciaiveeleones@gmail.com"
-        var socialSecNo : Int = 12345
-        var usCitizen : Boolean = false
-        var convicted : Boolean = false
-        var drugTest : Boolean = false
-        val education : String = "*** Education ******"
-        var schoolName : String = "Treston International College"
-        var location : String = "Taguig City"
-        var year : Int  = 4
-        var degree : String = "BS Tourism Management "
-        var major : String = "Major in Recess"
-        var trainingCert : String = "Flight attendant training"
+        val title : String
 
-        println(title)
-        println("Position you are applying for: $jobPosition")
-        println("Desired Salary : ₱ $desireSalary")
-        println("Date Available for Work : $workDateAvailability")
-        println()
-        println(personalInformation)
-        println("Name : $lastName, $firstName $middleName")
-        println("Birthdate: $birthDate Age : $age Gender : $gender")
-        println("Address : $address, $city City, $state $zipCode")
-        println("Home Phone : $homePhone Cellphone : $cellPhone Email Address : $email")
-        println("Social Security Number: $socialSecNo")
-        println("Are you a US Citizen? : $usCitizen")
-        println("Have you ever been convicted of a felony? : $convicted")
-        println("If selected for employment are you willing to submit to a pre-employment drug screening test? : $drugTest")
-        println ()
-        println(education)
-        println("$schoolName  $location  $year  $degree $major")
-        println("Other training, certifications, or licenses held : $trainingCert")
+        //First Section
+
+        var jobPosition : String
+        var desireSalary : Double
+        var workDateAvailability = Date()
+
+        //Personal Information Section
+
+        val personalInformation : String
+        var lastName : String
+        var firstName : String
+        var middleName : String
+        var birthDate = Date()
+        var age : Int
+        var gender : String
+        var address: String
+        var city : String
+        var state : String
+        var zipCode : Int
+        var homePhone : Int
+        var cellPhone: Long
+        var email : String
+        var socialSecNo : Int
+        var usCitizen : Boolean
+        var convicted : Boolean
+        var drugTest : Boolean
+
+
+        //Education Section
+
+        val education : String
+        var schoolName1 : String
+        var schoolName2 : String
+        var schoolName3 : String
+        var location1 : String
+        var location2 : String
+        var location3 : String
+        var year1 : Int
+        var year2 : Int
+        var year3 : Int
+        var degree1 : String
+        var degree2 : String
+        var degree3 : String
+        var major1 : String
+        var major2 : String
+        var major3 : String
+        var trainingCertificate : String
+
 }
