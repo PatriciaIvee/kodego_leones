@@ -19,7 +19,7 @@ fun main() {
         var state : String = "Metro Manila"
         var zipCode : Int = 1630
         var homePhone : Int = 87000
-        var cellPhone: Int = 123456789
+        var cellPhone: Long = 12345678912L
         var email : String = "patriciaiveeleones@gmail.com"
         var socialSecNo : Int = 12345
         var usCitizen : Boolean = false
