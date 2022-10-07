@@ -3,10 +3,10 @@ package exercise_1
 import java.util.Date
 
 fun main() {
-        val title : String
+
 
         //First Section
-
+        val title : String
         var jobPosition : String
         var desireSalary : Double
         var workDateAvailability = Date()
