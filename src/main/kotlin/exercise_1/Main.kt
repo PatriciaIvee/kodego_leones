@@ -35,7 +35,7 @@ fun main() {
 
         println(title)
         println("Position you are applying for: $jobPosition")
-        println("Desired Salary : $desireSalary")
+        println("Desired Salary : ₱ $desireSalary")
         println("Date Available for Work : $workDateAvailability")
         println()
         println(personalInformation)
