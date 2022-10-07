@@ -11,7 +11,7 @@ fun main() {
     var instructor : String
     var instructorAssistant : String
 
-    //details about your class
+    //Details about your class
     val classDetails : String
     var classBatch : String
     var course : String
