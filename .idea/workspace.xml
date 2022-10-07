@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Created activity_01_a&#10;made assignment activity 01 A from Canvas">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_a/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -110,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665145937052</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Created activity_01_a&#10;made assignment activity 01 A from Canvas">
+      <created>1665148561919</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665148561919</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +139,7 @@
     <MESSAGE value="Made variables and values exercise based from Employment-Application-Form-1.png and added ₱ line 38." />
     <MESSAGE value="Made variables and values exercise based from Employment-Application-Form-1.png and added ₱ line 38. changed int to long line 22." />
     <MESSAGE value="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png" />
+    <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created activity_01_a&#10;made assignment activity 01 A from Canvas" />
   </component>
 </project>
