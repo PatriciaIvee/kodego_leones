@@ -72,4 +72,10 @@ fun main() {
     var totalScore : Int
     var event : String
     var dueDate : Date
+
+    //    log in details for School Library Directory
+    var userName : String
+    var password : String
+    var libraryCard : String
+
 }
