@@ -8,6 +8,7 @@ import java.util.Date
 fun main() {
     //dateFormat
     val dateFormat =  DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm")
+
     //People involved in the directory
     val schoolDirectory : String
     var student : String
@@ -27,7 +28,7 @@ fun main() {
     var province : String
     var zipCode : Int
     var landlineNumber : Int?
-    var cellPhone: Long
+    var cellPhone: Long?
     var email : String?
     var department : String?
 
@@ -38,7 +39,7 @@ fun main() {
     var classBatch : String?
     var course : String?
     var subject : String?
-    var classSchedule : Date
+    var classSchedule : String
     var roomNumber : Int
     var roomName : String
     var timeIn : Time

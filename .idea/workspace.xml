@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_a/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_a/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise_1/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exercise_1/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added nullable variables." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +142,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665155492008</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added nullable variables and DateTimeFormatter.">
+      <created>1665212082408</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665212082408</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added nullable variables.">
+      <created>1665212202605</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665212202605</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added nullable variables.">
+      <created>1665212366212</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665212366212</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +190,8 @@
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Changed d to D line 14" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var dueDate" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd" />
+    <MESSAGE value="added nullable variables and DateTimeFormatter." />
+    <MESSAGE value="added nullable variables." />
+    <option name="LAST_COMMIT_MESSAGE" value="added nullable variables." />
   </component>
 </project>
