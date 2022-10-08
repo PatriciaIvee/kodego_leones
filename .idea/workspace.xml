@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Updated other variables and values needed for School Directory" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_a/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_a/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise_1/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exercise_1/Main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,13 +39,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/LENOVO/Desktop/Kodego_MD2P_Pat_Leones/src/main/kotlin/ApplicationForEmployment.kt"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/Kodego_MD2P_Pat_Leones/src/main/kotlin/ApplicationForEmployment.kt&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -121,7 +125,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665155056811</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Changed d to D line 14">
+      <created>1665155143133</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665155143133</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var dueDate">
+      <created>1665155319178</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665155319178</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd">
+      <created>1665155492008</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665155492008</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +170,9 @@
     <MESSAGE value="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Updated other variables and values needed for School Directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Updated other variables and values needed for School Directory" />
+    <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Changed d to D line 14" />
+    <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var dueDate" />
+    <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd" />
   </component>
 </project>
