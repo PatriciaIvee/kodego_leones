@@ -27,8 +27,8 @@ fun main() {
         var city : String
         var state : String
         var zipCode : Int
-        var homePhone : Int
-        var cellPhone: Long
+        var homePhone : Int?
+        var cellPhone: Long?
         var email : String?
         var socialSecNo : String?
         var usCitizen : Boolean
