@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added nullable variables.">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_b/Main.kt" afterDir="false" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Created package activity_01_b and Main.kt for Activity 01 b on Canvas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_b/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_b/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665213183300</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Created package activity_01_b and Main.kt for Activity 01 b on Canvas">
+      <created>1665229328204</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1665229328208</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +210,7 @@
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd" />
     <MESSAGE value="added nullable variables and DateTimeFormatter." />
     <MESSAGE value="added nullable variables." />
-    <option name="LAST_COMMIT_MESSAGE" value="added nullable variables." />
+    <MESSAGE value="Created package activity_01_b and Main.kt for Activity 01 b on Canvas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created package activity_01_b and Main.kt for Activity 01 b on Canvas" />
   </component>
 </project>
