@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added log in detail variables for package activity_01_a Main.kt">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_c/Main.kt" afterDir="false" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Created package activity_01_c and Main.kt for completion of Activity 01 c exercise in Canvas.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/IfSample.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/UnaryOperation.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665230108648</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Created package activity_01_c and Main.kt for completion of Activity 01 c exercise in Canvas.">
+      <created>1665400740894</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1665400740894</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +235,7 @@
     <MESSAGE value="Created package activity_01_b and Main.kt for Activity 01 b on Canvas" />
     <MESSAGE value="added log in details variables and contact details variables for package activity_01_b, Main.kt" />
     <MESSAGE value="Added log in detail variables for package activity_01_a Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added log in detail variables for package activity_01_a Main.kt" />
+    <MESSAGE value="Created package activity_01_c and Main.kt for completion of Activity 01 c exercise in Canvas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created package activity_01_c and Main.kt for completion of Activity 01 c exercise in Canvas." />
   </component>
 </project>
