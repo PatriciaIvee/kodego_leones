@@ -29,7 +29,7 @@ fun main() {
         println(enterHere)
         var divisor : String? = readLine().toString()
         println("Okay the answer is...")
-//        println((num1 + num2 + num3 +num4 + num5)/divisor.toInt())
+       println((num1 + num2 + num3 +num4 + num5)/divisor.toInt())
     } else if (ready.uppercase() == "N") {
         println("Okay till next time!")
     } else {

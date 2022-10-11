@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added code to hopefully answer Activity 01 d in Canvas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665481702826</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added code to hopefully answer Activity 01 d in Canvas">
+      <created>1665484154907</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665484154907</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +263,7 @@
     <MESSAGE value="Notes for Lecture 10-10-2022" />
     <MESSAGE value="Added more notes for Lecture 10-10-2022" />
     <MESSAGE value="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt." />
+    <MESSAGE value="added code to hopefully answer Activity 01 d in Canvas" />
+    <option name="LAST_COMMIT_MESSAGE" value="added code to hopefully answer Activity 01 d in Canvas" />
   </component>
 </project>
