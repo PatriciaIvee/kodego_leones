@@ -6,7 +6,7 @@ fun main() {
 
     var inputInstruction : String = "I will ask you to input 5 monetary amounts are you ready? (Y/N)"
     println(inputInstruction)
-    var enterHere : String = "Enter number : "
+    val enterHere : String = "Enter number : "
 
     var ready = readLine().toString()
     if (ready.uppercase() == "Y" ) {
