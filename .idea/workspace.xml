@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="updated code with !! in variables Activity 01 d in Canvas">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added peso sign to print lines">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" afterDir="false" />
     </list>
@@ -265,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665488224541</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added peso sign to print lines">
+      <created>1665491520916</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1665491520916</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -304,6 +311,7 @@
     <MESSAGE value="added code to hopefully answer Activity 01 d in Canvas" />
     <MESSAGE value="updated code removed comment line in line 32 to hopefully answer Activity 01 d in Canvas" />
     <MESSAGE value="updated code with !! in variables Activity 01 d in Canvas" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated code with !! in variables Activity 01 d in Canvas" />
+    <MESSAGE value="added peso sign to print lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="added peso sign to print lines" />
   </component>
 </project>

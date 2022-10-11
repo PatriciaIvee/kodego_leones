@@ -14,38 +14,50 @@ fun main() {
         println(enterHere)
 
        var num1 = readLine()!!.toDouble()
-//        var num1 = readLine().toDouble()
-//        var num1Double = num1.toDouble()
+        /*
+        var num1 = readLine()
+        var num1Double = num1.toDouble()
+        */
         println("You entered ₱ $num1. Great! Now enter the second number.")
         println(enterHere)
 
        var num2 = readLine()!!.toDouble()
-//        var num2 = readLine().toDouble()
-//        var num2Double = num2.toDouble()
+        /*
+        var num2 = readLine()
+        var num2Double = num2.toDouble()
+        */
         println("You entered ₱ $num2. Great! Now enter the third number.")
         println(enterHere)
 
         var num3 = readLine()!!.toDouble()
-//        var num3 = readLine().toDouble()
-//        var num3Double = num3.toDouble()
+        /*
+        var num3 = readLine().toDouble()
+        var num3Double = num3.toDouble()
+        */
         println("You entered $num3. Great! Now enter the fourth number.")
         println(enterHere)
 
         var num4 : Double = readLine()!!.toDouble()
-//        var num4 : Double = readLine().toDouble()
-//        var num4Double = num4.toDouble()
+        /*
+        var num4 = readLine()
+        var num4Double = num4.toDouble()
+        */
         println("You entered ₱ $num4. Great! Now enter the fifth number.")
         println(enterHere)
 
         var num5 : Double = readLine()!!.toDouble()
-//        var num5 : Double = readLine()!!.toDouble()
-//        var num5Double = num5.toDouble()
+        /*
+        var num5 = readLine()
+        var num5Double = num5.toDouble()
+        */
         println("You entered ₱ $num5. Okay! Now enter a number to divide all numbers to.")
         println(enterHere)
 
         var divisor : Int = readLine()!!.toInt()
-//        var divisor : Double = readLine().toDouble()
-//        var divisorDouble = divisor.toDouble()
+        /*
+        var divisor = readLine()
+        var divisorDouble = divisor.toDouble()
+        */
 
         println("Okay the answer is...")
 //        println(((num1Double + num2Double + num3Double +num4Double + num5Double)/divisorDouble).equals(Int))
