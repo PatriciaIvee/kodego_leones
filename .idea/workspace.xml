@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Notes for Lecture 10-10-2022">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/UnaryOperation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/UnaryOperation.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -209,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665407676384</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added more notes for Lecture 10-10-2022">
+      <created>1665481425349</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1665481425349</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt.">
+      <created>1665481702826</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1665481702826</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +257,8 @@
     <MESSAGE value="Added log in detail variables for package activity_01_a Main.kt" />
     <MESSAGE value="Created package activity_01_c and Main.kt for completion of Activity 01 c exercise in Canvas." />
     <MESSAGE value="Notes for Lecture 10-10-2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes for Lecture 10-10-2022" />
+    <MESSAGE value="Added more notes for Lecture 10-10-2022" />
+    <MESSAGE value="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt." />
   </component>
 </project>
