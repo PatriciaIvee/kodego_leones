@@ -43,7 +43,7 @@ fun main() {
         println("You entered $num5. Okay! Now enter a number to divide all numbers to.")
         println(enterHere)
 
-        var divisor : Double = readLine()!!.toDouble()
+        var divisor : Int = readLine()!!.toInt()
 //        var divisor : Double = readLine().toDouble()
 //        var divisorDouble = divisor.toDouble()
 
