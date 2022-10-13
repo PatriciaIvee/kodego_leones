@@ -9,6 +9,7 @@ fun main() {
     val enterHere : String = "Enter number : "
 
     var ready = readLine().toString()
+
     if (ready.uppercase() == "Y" ) {
         println("Okay let's proceed enter the first number.")
         println(enterHere)
@@ -68,4 +69,5 @@ fun main() {
     } else {
         println("I can't understand you. Please enter Y or N")
     }
+
 }
