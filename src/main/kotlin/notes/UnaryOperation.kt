@@ -37,4 +37,7 @@ fun main() {
 
     decrement -= 2
     println("Increment : $decrement")
+
+    println("Plus plus: ${plusPlus++}")
+    println("Minus minus:${--minusMinus}")
 }

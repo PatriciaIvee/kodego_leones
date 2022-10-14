@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="changed var to val line 9">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="updated Main.kt activity_01_d">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/ConditionalStatements.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/Demo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/IfSample2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/LoopExample.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/notes/IfSample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/notes/IfSample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/notes/UnaryOperation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/notes/UnaryOperation.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -286,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665497847342</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="updated Main.kt activity_01_d">
+      <created>1665659250033</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1665659250033</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,7 +313,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added package 1 and main.kt and renamed main.kt to Main.kt" />
     <MESSAGE value="Made variables and values exercise based from Employment-Application-Form-1.png" />
     <MESSAGE value="Made variables and values exercise based from Employment-Application-Form-1.png and added ₱ line 38." />
     <MESSAGE value="Made variables and values exercise based from Employment-Application-Form-1.png and added ₱ line 38. changed int to long line 22." />
@@ -326,6 +337,7 @@
     <MESSAGE value="added peso sign to print lines" />
     <MESSAGE value="turned single line comments to block comments" />
     <MESSAGE value="changed var to val line 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed var to val line 9" />
+    <MESSAGE value="updated Main.kt activity_01_d" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Main.kt activity_01_d" />
   </component>
 </project>
