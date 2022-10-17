@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Turned var to val.">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added Instructions for Activities from Canvas.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/ArrayLesson.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_b/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_b/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_c/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_c/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665998857351</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added Instructions for Activities from Canvas.">
+      <created>1665999381596</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1665999381596</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +395,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Updated other variables and values needed for School Directory" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Changed d to D line 14" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var dueDate" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd" />
@@ -414,7 +419,8 @@
     <MESSAGE value="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info" />
     <MESSAGE value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0." />
     <MESSAGE value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Turned var to val." />
-    <option name="LAST_COMMIT_MESSAGE" value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Turned var to val." />
+    <MESSAGE value="Added Instructions for Activities from Canvas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Instructions for Activities from Canvas." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
