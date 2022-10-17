@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -352,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665765174194</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0.">
+      <created>1665998438409</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1665998438409</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Updated other variables and values needed for School Directory" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Changed d to D line 14" />
@@ -392,7 +395,8 @@
     <MESSAGE value="added and updated notes about loops, if else function, parse int etc." />
     <MESSAGE value="For logging in Kotlin or in apps. Logging is more important than println" />
     <MESSAGE value="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info" />
+    <MESSAGE value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0." />
+    <option name="LAST_COMMIT_MESSAGE" value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

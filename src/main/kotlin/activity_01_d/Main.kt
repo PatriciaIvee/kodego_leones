@@ -31,7 +31,7 @@ fun main() {
 //                    user input integer is added until we reach 5 integer userInput
             } else {
 //                    it will print this statement if the input is blank
-                logger.info { "User did not enter a value counted as null." }
+                logger.info { "User did not enter a value. Counted as null." }
             }
         } else {
             logger.info { "Please enter an integer value : " }
@@ -58,7 +58,7 @@ fun main() {
                 var total = sum / userInputInt
                 logger.info { "The total is : $total" }
             } else {
-                logger.info { "User did not enter a value counted as null" }
+                logger.info { "User did not enter a value. Counted as null." }
                 logger.info { "Sum : $sum" }
                 logger.info { sum / 0 } // program throws an error because anything divided by zero is invalid
             }
