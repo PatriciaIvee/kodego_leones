@@ -20,10 +20,10 @@ fun main() {
     while (i <= 5) {
 // while loop to enter 5 numbers
         logger.info {"Input # $i"}
-        var userInput = readLine()
+        val userInput = readLine()
 // readLine = string value
         if (userInput != null && userInput.all { char -> char.isDigit() } ) {
-            var userInputInt = userInput.toIntOrNull()
+            val userInputInt = userInput.toIntOrNull()
 //            it will convert string (readLine) into integer
             if (userInputInt != null) {
 //                    it will check if the input is not blank
@@ -49,13 +49,13 @@ fun main() {
 
     while (i <= 6 ) {
 //since we stopped at 5 i we also created a loop for a correct divisor input (integer)
-        var userInputDivisor = readLine()
+        val userInputDivisor = readLine()
         logger.info { "Input divisor $userInputDivisor" }
 // we create a new read line for divisor input
         if (userInputDivisor != null && userInputDivisor.all { char -> char.isDigit() } ) {
-            var userInputInt = userInputDivisor.toIntOrNull()
+            val userInputInt = userInputDivisor.toIntOrNull()
             if (userInputInt != null) {
-                var total = sum / userInputInt
+                val total = sum / userInputInt
                 logger.info { "The total is : $total" }
             } else {
                 logger.info { "User did not enter a value. Counted as null." }
