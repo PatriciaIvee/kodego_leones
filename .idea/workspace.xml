@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="For logging in Kotlin or in apps. Logging is more important than println">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/RedoExercise.kt" afterDir="false" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_d/Main.kt" afterDir="false" />
     </list>
@@ -47,7 +46,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/Kodego_MD2P_Pat_Leones/src/main/kotlin/ApplicationForEmployment.kt&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.RedoExerciseKt">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="LoggingKotlinKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="notes.LoggingKotlinKt" />
       <module name="KodeGoExercisesLeones.main" />
@@ -62,6 +61,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="activity_01_d.MainKt" />
+      <module name="KodeGoExercisesLeones.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RedoExerciseKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="activity_01_d.RedoExerciseKt" />
       <module name="KodeGoExercisesLeones.main" />
@@ -71,6 +77,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.RedoExerciseKt" />
         <item itemvalue="Kotlin.LoggingKotlinKt" />
         <item itemvalue="Kotlin.LoopExampleKt" />
@@ -338,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665750488187</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info">
+      <created>1665765174194</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1665765174194</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,7 +367,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made variables and values exercise based from Employment-Application-Form-1.png and added ₱ line 38. changed int to long line 22." />
     <MESSAGE value="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas" />
     <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;Updated other variables and values needed for School Directory" />
@@ -378,7 +391,8 @@
     <MESSAGE value="updated Main.kt activity_01_d" />
     <MESSAGE value="added and updated notes about loops, if else function, parse int etc." />
     <MESSAGE value="For logging in Kotlin or in apps. Logging is more important than println" />
-    <option name="LAST_COMMIT_MESSAGE" value="For logging in Kotlin or in apps. Logging is more important than println" />
+    <MESSAGE value="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
