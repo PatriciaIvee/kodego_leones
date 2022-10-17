@@ -45,7 +45,7 @@ fun main() {
         ++i
     }
     logger.info { "The sum is : $sum" }
-    logger.info { "Divide the value by how many?  " }
+    logger.info { "Divide the value by how many? " }
 
     while (i <= 6 ) {
 //since we stopped at 5 i we also created a loop for a correct divisor input (integer)
