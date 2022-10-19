@@ -73,4 +73,52 @@ fun main() {
 
         studentNames.contains("Patrick")
 
+        var numberSet = numbers as LinkedHashSet<Char>
+        for (number in numberSet) {
+            logger.info { "Number: $number" }
+
+        }
+        numberSet.add('6')
+        numberSet.add('1')
+        numberSet.add('0')
+        numberSet.remove('0')
+        numberSet.remove('4')
+        numberSet.clear()
+
+        for(number in numberSet){
+            logger.info { "New number: $number" }
+        }
+
+//        var iterator = numberSet.iterator()
+        while( iterator.hasNext()){
+            logger.info { "Numbers: ${iterator.next()}" }
+        }
+
+
+
+        var numberMap = characters  as HashMap <String, Int>
+        for (entry in numberMap.entries) {
+            logger.info { "Key : ${entry.key} -> Value: ${entry.value}" }
+        }
+
+        for (value in numberMap.values) {
+            logger.info { "Value: $value" }
+        }
+
+        for (key in numberMap.keys) {
+            logger.info { "Key: $key" }
+        }
+        numberMap.put("Four", 4)
+        numberMap["Five"] = 5
+
+        for(entry in numberMap.entries) {
+            logger.info { "Key: ${entry.key} -> Value : ${entry.value} " }
+        }
+        numberMap["Five"] = 6
+        for(entry in numberMap.entries) {
+        logger.info { "Key: ${entry.key} -> Value : ${entry.value} " }
+    }
+
+
+
     }

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added DataStructure3.kt for notes" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added Notes DataStructure3.kt DataStructure4.kt">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/DataStructure4.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/notes/DataStructure3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/notes/DataStructure3.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +44,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/Kodego_MD2P_Pat_Leones/src/main/kotlin/ApplicationForEmployment.kt&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/Kodego_MD2P_Pat_Leones/src/main/kotlin/ApplicationForEmployment.kt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Kotlin.MainKt">
@@ -384,7 +389,28 @@
       <option name="project" value="LOCAL" />
       <updated>1666000033229</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Added DataStructure3.kt for notes">
+      <created>1666003924931</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1666003924931</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Changed line 48 with Divide the value by how many?">
+      <created>1666004020317</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1666004020317</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Changed line 48 with Divide the value by how many?">
+      <created>1666004043143</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1666004043143</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,8 +425,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var dueDate" />
-    <MESSAGE value="Created activity_01_a&#10;made assignment activity 01 A from Canvas&#10;added var courseStart and var courseEnd" />
     <MESSAGE value="added nullable variables and DateTimeFormatter." />
     <MESSAGE value="added nullable variables." />
     <MESSAGE value="Created package activity_01_b and Main.kt for Activity 01 b on Canvas" />
@@ -424,32 +448,8 @@
     <MESSAGE value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Turned var to val." />
     <MESSAGE value="Added Instructions for Activities from Canvas." />
     <MESSAGE value="Added DataStructure3.kt for notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DataStructure3.kt for notes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/notes/LoopExample.kt</url>
-          <line>14</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/notes/LoopExample.kt</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/notes/LoopExample.kt</url>
-          <line>8</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/notes/LoopExample.kt</url>
-          <line>9</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Changed line 48 with Divide the value by how many?" />
+    <MESSAGE value="Added Notes DataStructure3.kt DataStructure4.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Notes DataStructure3.kt DataStructure4.kt" />
   </component>
 </project>
