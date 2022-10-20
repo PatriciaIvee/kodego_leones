@@ -16,7 +16,7 @@ fun main() {
 
     val title = "Welcome to Activity 01 F"
     logger.info { title }
-    println("Enter a string:")
+    logger.info { "Enter a string:" }
 
     var index = 0
     while (index < 2){
