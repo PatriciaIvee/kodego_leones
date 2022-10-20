@@ -24,16 +24,16 @@ fun main() {
         index ++
 
         val inputStringHashMap:HashMap<Char,Int> = HashMap()
-        var theChar : Char
+        var character : Char
 
         for (a in inputString.indices) {
-            theChar = inputString[a]
+            character = inputString[a]
 //        the character within the string
-            if (inputStringHashMap.containsKey(theChar)){
-                inputStringHashMap[theChar] = inputStringHashMap[theChar]!! + 1
+            if (inputStringHashMap.containsKey(character)){
+                inputStringHashMap[character] = inputStringHashMap[character]!! + 1
 // will add 1 if there is more than one more of the character
             }else{
-                inputStringHashMap[theChar] = 1
+                inputStringHashMap[character] = 1
 // will not change value other than one
             }
 
