@@ -16,18 +16,36 @@ fun main() {
 
     val title = "Welcome to Activity 01 F"
     logger.info { title }
-    var stringInput = 1
+    println("Enter a string:")
 
-    while (stringInput <=2){
-        logger.info { "Please enter a string value: " }
-        logger.info { "" }
-         val enterString = readLine()
+    var index = 0
+    while (index < 2){
+        val inputString = readln()
+        index ++
 
-         if (enterString.isNullOrEmpty()){
-             logger.error { "String is blank" }
-         } else {
-             stringInput += 1
-         }
+        val inputStringHashMap:HashMap<Char,Int> = HashMap()
+        var theChar : Char
+
+        for (a in inputString.indices) {
+            theChar = inputString[a]
+//        the character within the string
+            if (inputStringHashMap.containsKey(theChar)){
+                inputStringHashMap[theChar] = inputStringHashMap[theChar]!! + 1
+// will add 1 if there is more than one more of the character
+            }else{
+                inputStringHashMap[theChar] = 1
+// will not change value other than one
+            }
+
+        }
+        println("$inputStringHashMap")
+
     }
+
+
+
+
+
+
 
 }

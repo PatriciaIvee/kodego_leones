@@ -13,7 +13,7 @@ fun main() {
      * Ex:
      * GIRAFARIG - Palindrome
      * 101 - Palindrome
-     * RACECAR - Palimdrome
+     * RACECAR - Palindrome
      *  GATE - Not Palindrome
      */
 
@@ -22,9 +22,14 @@ fun main() {
     val title = "Welcome to Activity 01 G"
     logger.info { title }
     logger.info { "Please Enter a String." }
-    var enterInput = readLine()
 
+    val inputString = readln()
+    var reverseInput = inputString.reversed()
 
-
+    if (inputString.equals(reverseInput,ignoreCase = true)) {
+        logger.info { "$inputString - Palindrome" }
+    } else {
+        logger.info { "$inputString - Not Palindrome." }
+    }
 
 }

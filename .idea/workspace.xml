@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added Notes DataStructure3.kt DataStructure4.kt">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_f/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_g/Main.kt" afterDir="false" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added Main.kt package activity_01_f&#10;Added Main.kt package activity.01_g">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_h/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_f/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_f/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_g/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_g/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.MainKt (2)">
+  <component name="RunManager" selected="Kotlin.MainKt (1)">
     <configuration name="LoggingKotlinKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="notes.LoggingKotlinKt" />
       <module name="KodeGoExercisesLeones.main" />
@@ -86,8 +87,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt (2)" />
         <item itemvalue="Kotlin.MainKt (1)" />
+        <item itemvalue="Kotlin.MainKt (2)" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.RedoExerciseKt" />
         <item itemvalue="Kotlin.LoggingKotlinKt" />
@@ -425,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666180618311</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added Main.kt package activity_01_f&#10;Added Main.kt package activity.01_g">
+      <created>1666187661412</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1666187661414</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added nullable variables and DateTimeFormatter." />
     <MESSAGE value="added nullable variables." />
     <MESSAGE value="Created package activity_01_b and Main.kt for Activity 01 b on Canvas" />
     <MESSAGE value="added log in details variables and contact details variables for package activity_01_b, Main.kt" />
@@ -465,6 +472,7 @@
     <MESSAGE value="Added DataStructure3.kt for notes" />
     <MESSAGE value="Changed line 48 with Divide the value by how many?" />
     <MESSAGE value="Added Notes DataStructure3.kt DataStructure4.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Notes DataStructure3.kt DataStructure4.kt" />
+    <MESSAGE value="Added Main.kt package activity_01_f&#10;Added Main.kt package activity.01_g" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Main.kt package activity_01_f&#10;Added Main.kt package activity.01_g" />
   </component>
 </project>
