@@ -31,7 +31,7 @@ fun main() {
 //        the character within the string
             if (inputStringHashMap.containsKey(character)){
                 inputStringHashMap[character] = inputStringHashMap[character]!! + 1
-// will add 1 if there is more than one more of the character
+// will add 1 if there is more than one of the character
             }else{
                 inputStringHashMap[character] = 1
 // will not change value other than one
