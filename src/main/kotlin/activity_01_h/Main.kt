@@ -26,7 +26,7 @@ fun main() {
         var notPrimeNumber = false
 //        condition if is not a prime number
         for (i in 2.. inputInt1 / 2) {
-//            number will move 2 places start range then /2 ?
+//            number will move 2 places start range then /2
             if (inputInt1 % i == 0) {
 //                if the input1 Start is equal to 0 when divided by 2 no  remainder
                 notPrimeNumber = true
