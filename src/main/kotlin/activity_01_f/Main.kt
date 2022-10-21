@@ -41,7 +41,7 @@ fun main() {
         logger.info { "$inputStringHashMap" }
 //        val reversedHashMap = inputStringHashMap.entries.associate{(k,v)-> v to k}
 //        to reverse <char,int> to <int, char>
-        val uniqueKey = inputStringHashMap.filterValues {it == 1 }.keys
+        val uniqueKey = inputStringHashMap.filterValues { it == 1 }.keys
 //        this is to check which characters within a string is value of one.
         logger.info { "Unique keys of string $inputString: $uniqueKey" }
     }
