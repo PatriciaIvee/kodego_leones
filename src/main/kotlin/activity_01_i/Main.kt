@@ -10,9 +10,12 @@ fun main() {
      * Goal: Keep track book borrowed, who borrowed and how long it can be borrowed.
      * Scope : Data Structures
      */
-
+//Login, password username and details
     var userNameHashSet:Set<String> = HashSet<String>()
+    var passwordArrayList = ArrayList<String>()
     var logInDetail:Map<String, String> = mutableMapOf()
+
+//    Book information location and time borrowed
     var bookNames:List<String> = mutableListOf<String>()
     var isbnNumberList = ArrayList<String>()
     var bookLocationMap:Map<String, Int> = mutableMapOf() //Section and bookshelf number
