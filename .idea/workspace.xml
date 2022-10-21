@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added loop Solution to activity_01_F Main.kt&#10;logger.info for Unique Keys">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_f/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_f/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_h/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_h/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added loop Solution to activity_01_F Main.kt&#10;Added some space line 44" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,34 +90,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Made variables and values exercise based from Employment-Application-Form-1.png and added ₱ line 38.">
-      <created>1665142446135</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1665142446135</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Made variables and values exercise based from Employment-Application-Form-1.png and added ₱ line 38. changed int to long line 22.">
-      <created>1665142768947</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1665142768947</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png">
-      <created>1665145812394</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1665145812394</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Removed declared values. Divided each var into sections based from Employment-Application-Form-1.png">
-      <created>1665145937052</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1665145937052</updated>
     </task>
     <task id="LOCAL-00009" summary="Created activity_01_a&#10;made assignment activity 01 A from Canvas">
       <created>1665148561919</created>
@@ -438,7 +406,35 @@
       <option name="project" value="LOCAL" />
       <updated>1666339822504</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Unique Keys">
+      <created>1666342691292</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1666342691292</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Prime numbers">
+      <created>1666342745329</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1666342745329</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added loop Solution to activity_01_H Main.kt&#10;Added some comment line">
+      <created>1666342797412</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1666342797412</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added loop Solution to activity_01_F Main.kt&#10;Added some space line 44">
+      <created>1666342849507</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1666342849507</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -453,10 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added more notes for Lecture 10-10-2022" />
-    <MESSAGE value="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt." />
-    <MESSAGE value="added code to hopefully answer Activity 01 d in Canvas" />
-    <MESSAGE value="updated code removed comment line in line 32 to hopefully answer Activity 01 d in Canvas" />
     <MESSAGE value="updated code with !! in variables Activity 01 d in Canvas" />
     <MESSAGE value="added peso sign to print lines" />
     <MESSAGE value="turned single line comments to block comments" />
@@ -478,6 +470,10 @@
     <MESSAGE value="changed comment line" />
     <MESSAGE value="Added loop Solution to activity_01_g Main.kt" />
     <MESSAGE value="Added loop Solution to activity_01_F Main.kt&#10;logger.info for Unique Keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added loop Solution to activity_01_F Main.kt&#10;logger.info for Unique Keys" />
+    <MESSAGE value="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Unique Keys" />
+    <MESSAGE value="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Prime numbers" />
+    <MESSAGE value="Added loop Solution to activity_01_H Main.kt&#10;Added some comment line" />
+    <MESSAGE value="Added loop Solution to activity_01_F Main.kt&#10;Added some space line 44" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added loop Solution to activity_01_F Main.kt&#10;Added some space line 44" />
   </component>
 </project>
