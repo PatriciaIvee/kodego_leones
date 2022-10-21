@@ -21,6 +21,7 @@ fun main() {
     var bookLocationMap:Map<String, Int> = mutableMapOf() //Section and bookshelf number
     var timeBorrowedArrayList = ArrayList<Date>()
     var timeReturnedArrayList = ArrayList<Date>()
-
+    var bookBorrowerArrayList = ArrayList<String>()
+    var dayLimitBorrowSet:Set<CharRange> = mutableSetOf<CharRange>()
 
 }
