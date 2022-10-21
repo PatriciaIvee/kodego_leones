@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="changed comment line">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added loop Solution to activity_01_g Main.kt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_g/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_g/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_f/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_f/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.MainKt (2)">
+  <component name="RunManager" selected="Kotlin.MainKt (1)">
     <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="activity_01_f.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
@@ -78,8 +78,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt (2)" />
         <item itemvalue="Kotlin.MainKt (1)" />
+        <item itemvalue="Kotlin.MainKt (2)" />
         <item itemvalue="Kotlin.MainKt (3)" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
@@ -93,13 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added package 1 and main.kt and renamed main.kt to Main.kt">
-      <created>1665060234677</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1665060234677</updated>
     </task>
     <task id="LOCAL-00004" summary="Made variables and values exercise based from Employment-Application-Form-1.png">
       <created>1665142166031</created>
@@ -437,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666277069496</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Added loop Solution to activity_01_g Main.kt">
+      <created>1666337588087</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1666337588088</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -452,7 +452,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created package activity_01_c and Main.kt for completion of Activity 01 c exercise in Canvas." />
     <MESSAGE value="Notes for Lecture 10-10-2022" />
     <MESSAGE value="Added more notes for Lecture 10-10-2022" />
     <MESSAGE value="Moved IfSample.kt and UnaryOperation.kt to package notes folder. Created package activity_01_d and Main.kt." />
@@ -477,6 +476,7 @@
     <MESSAGE value="changed println to logger.info" />
     <MESSAGE value="refactored var theChar to character" />
     <MESSAGE value="changed comment line" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed comment line" />
+    <MESSAGE value="Added loop Solution to activity_01_g Main.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added loop Solution to activity_01_g Main.kt" />
   </component>
 </project>
