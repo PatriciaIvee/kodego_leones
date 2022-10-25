@@ -53,26 +53,18 @@ fun main() {
     var tuitionStatus : List <String> = ArrayList <String>()
 
     //Information to complete and pass the course, materials, announcements etc.
-    val classInformation : String
-    var announcements: String?
-    var module: String?
-    var exercise : String?
-    var assignment : String?
-    var quiz : String?
-    var project : String?
-    var recording : String?
-    var grade : Boolean
-    var score : Int?
-    var completed : Boolean
-    var totalModules : Int
-    var totalExercises : Int
-    var totalAssignments : Int
-    var totalQuizzes : Int
-    var totalProjects : Int
-    var totalRecordings : Int
-    var totalScore : Int
-    var event : String
-    var dueDate : Date
+    val classInformation = ArrayList<String>()
+    var announcements = ArrayList <String?>()
+    var modules = ArrayList <String?>()
+    var exercises = ArrayList <String?>()
+    var assignments  = ArrayList <String?>()
+    var quizzes  = ArrayList <String?>()
+    var projects  = ArrayList <String?>()
+    var recordings  = ArrayList <String?>()
+    var grades  = ArrayList <String?>()
+    var scores  = ArrayList <Int?>()
+    var events  = ArrayList <String?>()
+    var dueDates  = ArrayList <Date?>()
 
 
 }

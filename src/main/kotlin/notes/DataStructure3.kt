@@ -116,9 +116,11 @@ fun main() {
         }
         numberMap["Five"] = 6
         for(entry in numberMap.entries) {
-        logger.info { "Key: ${entry.key} -> Value : ${entry.value} " }
-    }
+            logger.info { "Key: ${entry.key} -> Value : ${entry.value} " }
+        }
+}
 
 
 
-    }
+
+
