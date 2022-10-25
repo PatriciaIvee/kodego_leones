@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial answers for activity 01 j Main.kt">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_02_a/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_02_a/Main.kt" afterDir="false" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_02_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_02_d/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,14 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.MainKt (3)">
+  <component name="RunManager" selected="Kotlin.MainKt (4)">
+    <configuration name="DataStructure3Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="notes.DataStructure3Kt" />
+      <module name="KodeGoExercisesLeones.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="activity_01_f.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
@@ -68,8 +76,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="activity_01_d.MainKt" />
+    <configuration name="MainKt (4)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="activity_02_d.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,10 +85,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt (4)" />
+        <item itemvalue="Kotlin.DataStructure3Kt" />
         <item itemvalue="Kotlin.MainKt (3)" />
         <item itemvalue="Kotlin.MainKt (1)" />
         <item itemvalue="Kotlin.MainKt (2)" />
-        <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -92,20 +101,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00016" summary="added nullable variables.">
-      <created>1665212366212</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1665212366212</updated>
-    </task>
-    <task id="LOCAL-00017" summary="added nullable variables.">
-      <created>1665213183300</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1665213183300</updated>
     </task>
     <task id="LOCAL-00018" summary="Created package activity_01_b and Main.kt for Activity 01 b on Canvas">
       <created>1665229328204</created>
@@ -436,7 +431,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666438414336</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="added partial answers for activity 02 a Main.kt">
+      <created>1666439806764</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1666439806764</updated>
+    </task>
+    <task id="LOCAL-00066" summary="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt">
+      <created>1666697206458</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1666697206459</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -451,8 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated Main.kt activity_01_d" />
-    <MESSAGE value="added and updated notes about loops, if else function, parse int etc." />
     <MESSAGE value="For logging in Kotlin or in apps. Logging is more important than println" />
     <MESSAGE value="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info" />
     <MESSAGE value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0." />
@@ -476,6 +483,8 @@
     <MESSAGE value="Added instruction details for package activity_01_i - activity_01_j&#10;and package activity_02_a - package activity_02_d." />
     <MESSAGE value="added partial answers for activity 01 i Main.kt" />
     <MESSAGE value="added partial answers for activity 01 j Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added partial answers for activity 01 j Main.kt" />
+    <MESSAGE value="added partial answers for activity 02 a Main.kt" />
+    <MESSAGE value="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt" />
   </component>
 </project>
