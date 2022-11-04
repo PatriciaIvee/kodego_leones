@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial answer for activity 02 d Main.kt,">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/Functions_01.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/notes/Functions_02.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_02_d/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_02_d/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="KodeGoExercisesLeones" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,13 +119,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Created package activity_01_b and Main.kt for Activity 01 b on Canvas">
-      <created>1665229328204</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1665229328208</updated>
     </task>
     <task id="LOCAL-00019" summary="added log in details variables and contact details variables for package activity_01_b, Main.kt">
       <created>1665229925477</created>
@@ -445,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666697206459</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="added partial answer for activity 02 d Main.kt,">
+      <created>1666698193478</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1666698193478</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,7 +478,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="For logging in Kotlin or in apps. Logging is more important than println" />
     <MESSAGE value="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info" />
     <MESSAGE value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0." />
     <MESSAGE value="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Turned var to val." />
@@ -485,6 +502,7 @@
     <MESSAGE value="added partial answers for activity 01 j Main.kt" />
     <MESSAGE value="added partial answers for activity 02 a Main.kt" />
     <MESSAGE value="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt" />
+    <MESSAGE value="added partial answer for activity 02 d Main.kt," />
+    <option name="LAST_COMMIT_MESSAGE" value="added partial answer for activity 02 d Main.kt," />
   </component>
 </project>
