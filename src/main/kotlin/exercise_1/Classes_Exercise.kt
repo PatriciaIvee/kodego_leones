@@ -3,7 +3,7 @@ package exercise_1
 import java.util.*
 
 
-class personalInformation {
+class PersonalInformation {
     var lastName : String = ""
     var firstName : String = ""
     var middleName : String = ""
@@ -15,16 +15,19 @@ class personalInformation {
     var city : String = ""
     var state : String = ""
     var zipCode : Int = 0
-    var homePhone : Int? = 0
-    var cellPhone: Long? = 0
-    var email : String? = ""
+
     var socialSecNo : String? = ""
-    var usCitizen : Boolean = false
+    var USCitizen : Boolean = false
     var convicted : Boolean = false
     var drugTest : Boolean = false
+
+    var contacts: ArrayList<Contacts> = ArrayList()
+}
+class Contacts(var type: String, var details: String){
+
 }
 
-class education {
+class Education {
     var schoolName1 : String? = ""
     var schoolName2 : String? = ""
     var schoolName3 : String? = ""
