@@ -42,5 +42,5 @@ fun returnFunction():Unit{
         return
     else
         println("Result:$result")
-
+    println("Finish Function")
 }
