@@ -13,3 +13,5 @@ fun subtract(value1:Int, value2:Long? = 0) = (value2?:value2 ?: 0) - value2!!
 fun subtract(value1:Int, value2:Int? = 0): Int? = (value2?:value2 ?: 0) - value2!!
 //pag hindi null yung value 2 ieenter niya yung value 2  pag null 0 ibabalik niya
 
+//object is blueprint
+//        class is instance
