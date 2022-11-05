@@ -63,8 +63,11 @@ fun main(args: Array<String>){
     names.add("name18")
     names.add("name19")
     names.add("name20")
-    logger.info { names }
 
+    names.forEach { name -> println(name) }
+    isStudentInRecord("name1", names)
+    addStudent("Joanna", names)
+    removeStudent("name20", names)
 }
 
 
@@ -80,13 +83,14 @@ fun isStudentInRecord(name:String = String(),studentArrayList: ArrayList<String>
 
 //    addStudent
 fun addStudent(name: String = String(), studentArrayList:ArrayList<String> = ArrayList<String>()) {
-    studentArrayList.add(name.toString())
+    studentArrayList.add(name)
     logger.info { studentArrayList }
     }
 
 //    removeStudent
 fun removeStudent(name: String = String(), studentArrayList:ArrayList<String> = ArrayList<String>()){
     studentArrayList.remove(name)
+    logger.info{studentArrayList}
   }
 
 //    countStudent
