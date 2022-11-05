@@ -4,7 +4,6 @@ import java.util.*
 
 
 class personalInformation {
-    val personalInformationLabel : String = ""
     var lastName : String = ""
     var firstName : String = ""
     var middleName : String = ""
@@ -26,7 +25,6 @@ class personalInformation {
 }
 
 class education {
-    val educationLabel : String = ""
     var schoolName1 : String? = ""
     var schoolName2 : String? = ""
     var schoolName3 : String? = ""
