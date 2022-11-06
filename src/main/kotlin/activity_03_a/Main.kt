@@ -16,10 +16,10 @@ private val logger = KotlinLogging.logger{}
  * 2. Create a function "isStudentInRecord" that will accept a name and
  * return true if the name is found, otherwise false.
  *
- * 3. Create a function "addStudent" that will accept a name and ass it to the
+ * 3. Create a function "addStudent" that will accept a name and add it to the
  * ArrayList.
  *
- * 4. Create a function "removeStudent" that will accept ta name and remove
+ * 4. Create a function "removeStudent" that will accept a name and remove
  * it from the ArrayList.
  *
  * 5. Create a function "countStudent" that will return the size of the ArrayList.
@@ -40,39 +40,64 @@ private val logger = KotlinLogging.logger{}
  *
  */
 
-fun main(args: Array<String>){
+fun main(){
 
     val names :ArrayList<String> = ArrayList()
-    names.add("name1")
-    names.add("name2")
-    names.add("name3")
-    names.add("name4")
-    names.add("name5")
-    names.add("name6")
-    names.add("name7")
-    names.add("name8")
-    names.add("name9")
-    names.add("name10")
-    names.add("name11")
-    names.add("name12")
-    names.add("name13")
-    names.add("name14")
-    names.add("name15")
-    names.add("name16")
-    names.add("name17")
-    names.add("name18")
-    names.add("name19")
-    names.add("name20")
+    names.add("Julio")
+    names.add("Eugene")
+    names.add("Isaiah")
+    names.add("Sarah")
+    names.add("Mark")
+    names.add("Joseph")
+    names.add("Marco")
+    names.add("Jeremiah")
+    names.add("Ismael")
+    names.add("Judith")
+    names.add("Ruth")
+    names.add("Rico")
+    names.add("Hannah")
+    names.add("Daniel")
+    names.add("Robert")
+    names.add("Joanna")
+    names.add("Anne")
+    names.add("Mary")
+    names.add("Mario")
+    names.add("Luigi")
+    names.add("julio")
+    names.add("Julia")
+    names.add("julio")
+    names.add("juLio")
+    names.add("jUlio")
 
-    names.forEach { name -> println(name) }
-    isStudentInRecord("name1", names)
-    addStudent("Joanna", names)
-    removeStudent("name20", names)
+
+    logger.info{"Enter a name to check of it is in the student record: "}
+    isStudentInRecord(studentArrayList =  names)
+
+    logger.info { "Add student onto the record: " }
+    addStudent(studentArrayList =  names)
+
+    logger.info {"Remove a student onto the record: " }
+    removeStudent(studentArrayList =  names)
+
+
+    countStudent(studentArrayList = names)
+
+    logger.info { "Wild Search a student: " }
+    searchStudentWildSearch(studentArrayList = names)
+
+    logger.info { "Search a student Name: " }
+    searchStudentName(studentArrayList = names)
+
+    logger.info { "Search Student:" }
+    searchStudent(studentArrayList = names)
+
+    logger.info {"Student names: " }
+    showStudents(names)
 }
 
 
 //    isStudentInRecord
-fun isStudentInRecord(name:String = String(),studentArrayList: ArrayList<String> = ArrayList()): Boolean {
+fun isStudentInRecord(name:String = readln(), studentArrayList: ArrayList<String> = ArrayList()): Boolean {
     if(studentArrayList.contains(name)){
         logger.info { "Name $name is in student record : true" }
         return true
@@ -82,23 +107,45 @@ fun isStudentInRecord(name:String = String(),studentArrayList: ArrayList<String>
 }
 
 //    addStudent
-fun addStudent(name: String = String(), studentArrayList:ArrayList<String> = ArrayList<String>()) {
+fun addStudent(name: String = readln(), studentArrayList:ArrayList<String> = ArrayList()) {
     studentArrayList.add(name)
-    logger.info { studentArrayList }
+    logger.info { "$name added in the Student List" }
     }
 
 //    removeStudent
-fun removeStudent(name: String = String(), studentArrayList:ArrayList<String> = ArrayList<String>()){
-    studentArrayList.remove(name)
-    logger.info{studentArrayList}
+fun removeStudent(name: String = readln(), studentArrayList:ArrayList<String> = ArrayList()){
+    if(!studentArrayList.contains(name)){
+        logger.info { "$name not in Student List." }
+    }else {
+        studentArrayList.remove(name)
+        logger.info { "$name removed." }
+        logger.info { studentArrayList }
+    }
+
   }
 
 //    countStudent
-fun countStudent(studentArrayList:ArrayList<String> = ArrayList<String>()){
-    logger.info { studentArrayList.size }
+fun countStudent(studentArrayList:ArrayList<String> = ArrayList()){
+    logger.info { "names size:${studentArrayList.size}" }
 }
 
-fun searchStudentWildSearch(){}
-fun searchStudentName(){}
-fun searchStudent(){}
-fun showStudents(){}
+fun searchStudentWildSearch(name: String = readln(), studentArrayList: ArrayList<String> = ArrayList()){
+    studentArrayList.filter {
+        it.contains(name, ignoreCase = true)
+    }
+    studentArrayList.forEach { studentName -> println(studentName) }
+}
+fun searchStudentName(name: String = readln(), studentArrayList: ArrayList<String> = ArrayList()){
+    val filterArrayList = studentArrayList.filter { it ==  name }
+    println(filterArrayList)
+}
+fun searchStudent(name: String = readln(), studentArrayList: ArrayList<String> = ArrayList()){
+    if(name.length <= 3){
+        searchStudentWildSearch(name,studentArrayList)
+    } else {
+        searchStudentName(name,studentArrayList)
+    }
+}
+fun showStudents(studentArrayList: ArrayList<String>){
+    studentArrayList.forEach { studentName -> println(studentName) }
+}
