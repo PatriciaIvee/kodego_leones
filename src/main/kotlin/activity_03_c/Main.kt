@@ -1,5 +1,7 @@
 package activity_03_c
 
+import java.io.LineNumberReader
+
 /**
  * Covered Topic(s) : Functions
  * Instructions :
@@ -14,3 +16,33 @@ package activity_03_c
  * and remove the input from the Hashmap. If there are multiple entries,
  * remove all from the HashMap.
  */
+
+fun main() {
+    var groceryProducts =arrayListOf<String>(
+        "item1",
+        "item2",
+        "item3",
+        "item4",
+        "item5",
+        "item6",
+        "item7",
+        "item8",
+        "item9",
+        "item10",
+        "item11",
+        "item12",
+        "item13",
+        "item14",
+        "item15",
+        "item16",
+        "item17",
+        "item18",
+        "item19",
+        "item20")
+
+    var cart:Map<String,Int> = HashMap()
+}
+
+fun addToCart(cart:Map<String,Int> = HashMap()){
+
+}
