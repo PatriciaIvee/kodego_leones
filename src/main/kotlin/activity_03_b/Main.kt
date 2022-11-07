@@ -6,7 +6,7 @@ private val logger = KotlinLogging.logger{}
 /**
  * Covered Topic(s) : Functions
  * Instructions :
- * 1. Create an ArrayList of bookname with 20 entries.
+ * 1. Create an ArrayList of book name with 20 entries.
  * 2. Create a function "isBookInRecord" that will accept a String
  * and return true if the book is found, otherwise false.
  * 3. Create a function "addBook" that will accept a String and add it to the ArrayList.
@@ -22,11 +22,11 @@ private val logger = KotlinLogging.logger{}
  * 8.  Create a function "showBooks" that will print all the entries in the ArrayList.
  */
 fun main() {
-    var bookNames:ArrayList<String> = ArrayList()
+    val bookNames:ArrayList<String> = ArrayList()
     bookNames.add("Book1")
     bookNames.add("Book2")
-    bookNames.add("Book3")
-    bookNames.add("Book4")
+    bookNames.add("Harry potter 2: Chamber of Secrets")
+    bookNames.add("Harry potter 3 : prisoner of Azkaban ")
     bookNames.add("Book5")
     bookNames.add("Book6")
     bookNames.add("Book7")
@@ -46,17 +46,40 @@ fun main() {
 
     logger.info { "Check if book is in the record: " }
     isBookInRecord(bookArrayList = bookNames)
+
+    logger.info { "Add a book: " }
+    addBook(bookArrayList = bookNames)
+
+    logger.info { "Remove a book: " }
+    removeBook(bookArrayList = bookNames)
+
+    logger.info { "Number of books: " }
+    countBooks()
+
+    logger.info { "BookWildSearch:" }
+    searchBookWildSearch(bookArrayList = bookNames)
+
+    logger.info { "Search exact book name: " }
+    searchBookName(bookArrayList = bookNames)
+
+    logger.info { "Books to show:" }
+    showBooks(bookArrayList = bookNames)
+
 }
 
 //isBookInRecord
-fun isBookInRecord(bookName:String = readln(),bookArrayList: ArrayList<String> = ArrayList()){
-    logger.info { "Is book in record?:" }
-    if (bookArrayList.contains(bookName)){
-        logger.info{ true }
-    } else{
-        logger.info { false }
+fun isBookInRecord(bookName:String = readln(),bookArrayList: ArrayList<String> = ArrayList()):Boolean{
+    val search = bookArrayList.filter {
+        it.contains(bookName, ignoreCase = true)
     }
-
+    logger.info { "Is book in record:" }
+    return if (search.isNotEmpty()){
+        logger.info{ true }
+        true
+    } else {
+        logger.info { false }
+        false
+    }
 }
 
 //addBook
@@ -65,14 +88,22 @@ fun addBook(bookName:String = readln(),bookArrayList: ArrayList<String> = ArrayL
 }
 //removeBook
 fun removeBook(bookName:String = readln(),bookArrayList: ArrayList<String> = ArrayList()){
-    bookArrayList.add(bookName)
+    if (bookArrayList.contains(bookName)){
+        bookArrayList.remove(bookName)
+        logger.info { "$bookName removed from the list." }
+    }else {
+        logger.info { "$bookName cannot be removed because [a] it either doesn't exist in the list" +
+                " or [b]book name isn't exact match." }
+    }
+
 }
 //countBooks
-fun countBooks(bookName:String = readln(),bookArrayList: ArrayList<String> = ArrayList()){
+fun countBooks(bookArrayList: ArrayList<String> = ArrayList()){
     logger.info{"Number of books in the list: ${ bookArrayList.size }"}
 }
 //searchBookWildSearch
 fun searchBookWildSearch(bookName:String = readln(),bookArrayList: ArrayList<String> = ArrayList()){
+
     val wildSearch = bookArrayList.filter {
         it.contains(bookName, ignoreCase = true)
     }
@@ -81,28 +112,13 @@ fun searchBookWildSearch(bookName:String = readln(),bookArrayList: ArrayList<Str
 //searchBookName
 fun searchBookName(bookName:String = readln(),bookArrayList: ArrayList<String> = ArrayList()){
     val exactSearch = bookArrayList.filter { it == bookName }
-    exactSearch.forEach { bookNames -> println(bookNames) }
+    if (exactSearch.isNotEmpty()){
+        exactSearch.forEach { bookNames -> println(bookNames) }
+    }else {
+        logger.info { "no exact match for $bookName" }
+    }
 }
 //showBooks
 fun showBooks(bookArrayList: ArrayList<String> = ArrayList()){
     bookArrayList.forEach { bookNames -> println(bookNames) }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
