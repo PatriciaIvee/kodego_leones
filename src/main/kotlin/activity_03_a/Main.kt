@@ -97,13 +97,12 @@ fun main(){
 
 
 //    isStudentInRecord
-fun isStudentInRecord(name:String = readln(), studentArrayList: ArrayList<String> = ArrayList()): Boolean {
+fun isStudentInRecord(name:String = readln(), studentArrayList: ArrayList<String> = ArrayList()){
     if(studentArrayList.contains(name)){
         logger.info { "Name $name is in student record : true" }
-        return true
     }
     logger.info {  "Name $name is in student record : false" }
-    return false
+
 }
 
 //    addStudent
@@ -124,28 +123,35 @@ fun removeStudent(name: String = readln(), studentArrayList:ArrayList<String> = 
 
   }
 
-//    countStudent
+//    CountStudent
 fun countStudent(studentArrayList:ArrayList<String> = ArrayList()){
     logger.info { "names size:${studentArrayList.size}" }
 }
 
+//WildSearch
 fun searchStudentWildSearch(name: String = readln(), studentArrayList: ArrayList<String> = ArrayList()){
-    studentArrayList.filter {
+    val wildSearch = studentArrayList.filter {
         it.contains(name, ignoreCase = true)
     }
-    studentArrayList.forEach { studentName -> println(studentName) }
+    wildSearch.forEach { studentName -> println(studentName) }
+
 }
 fun searchStudentName(name: String = readln(), studentArrayList: ArrayList<String> = ArrayList()){
-    val filterArrayList = studentArrayList.filter { it ==  name }
-    println(filterArrayList)
+    val exactSearch= studentArrayList.filter { it ==  name
+    }
+    exactSearch.forEach { studentName -> println(studentName) }
 }
+//Search Student
 fun searchStudent(name: String = readln(), studentArrayList: ArrayList<String> = ArrayList()){
-    if(name.length <= 3){
-        searchStudentWildSearch(name,studentArrayList)
-    } else {
+    if(name.length > 3 ){
         searchStudentName(name,studentArrayList)
+
+    } else {
+        searchStudentWildSearch(name, studentArrayList)
     }
 }
+
+//ShowStudents
 fun showStudents(studentArrayList: ArrayList<String>){
     studentArrayList.forEach { studentName -> println(studentName) }
 }
