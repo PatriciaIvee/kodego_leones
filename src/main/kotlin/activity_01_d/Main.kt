@@ -54,13 +54,20 @@ fun main() {
 // we create a new read line for divisor input
         if (userInputDivisor != null && userInputDivisor.all { char -> char.isDigit() } ) {
             val userInputInt = userInputDivisor.toIntOrNull()
-            if (userInputInt != null) {
-                val total = sum / userInputInt
-                logger.info { "The total is : $total" }
+            if (userInputInt != null ) {
+                if (userInputInt != 0){
+//                    Error Check if userInput is 0
+                    val total = sum / userInputInt
+                    logger.info { "The total is : $total" }
+                } else {
+                    logger.info { "You entered zero. This cannot beeee!" }
+                    logger.info { "Sum : $sum" }
+                }
+
             } else {
                 logger.info { "User did not enter a value. Counted as null." }
                 logger.info { "Sum : $sum" }
-                logger.info { sum / 0 } // program throws an error because anything divided by zero is invalid
+
             }
         }   else {
             logger.info { "Please enter an integer value :" }
