@@ -11,6 +11,11 @@ fun main() {
      *
      *  Scope: String, Loops
      */
+//    loop within loop is the solution 1
+//    Solution two use a set to contain both strings
+//    NOTE:DO THIS AGAIN
+//    DAPAT YOU HAVE TO ADD BOTH STRINGS AND THEN CHECK THE UNIQUE ONES
+//    UNION-INTERSECTION
 
 // SOLUTION
 
