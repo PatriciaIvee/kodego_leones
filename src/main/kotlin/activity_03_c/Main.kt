@@ -1,6 +1,10 @@
 package activity_03_c
 
-import java.io.LineNumberReader
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int
+import com.sun.tools.javac.jvm.PoolConstant.LoadableConstant.Int
+import mu.KotlinLogging
+
+private val logger = KotlinLogging.logger{}
 
 /**
  * Covered Topic(s) : Functions
@@ -18,7 +22,7 @@ import java.io.LineNumberReader
  */
 
 fun main() {
-    var groceryProducts =arrayListOf<String>(
+    var groceryProducts =arrayListOf(
         "item1",
         "item2",
         "item3",
@@ -40,9 +44,33 @@ fun main() {
         "item19",
         "item20")
 
-    var cart:Map<String,Int> = HashMap()
+    var cart:HashMap<String,Int> = HashMap()
+
+
+        addToCart(cartHashmap = cart)
+
+//    }
+//    addToCart(cartHashmap = cart)
+
+//    cart.forEach{ (key, value) -> logger.info {"Item:$key, amount: $value" }  }
 }
 
-fun addToCart(cart:Map<String,Int> = HashMap()){
+fun addToCart(cartHashmap: HashMap<String,Int> = HashMap(), item:String = readln(), amount: Int = readln().toInt() ){
+    logger.info { "Enter Item and amount of Item:" }
+    cartHashmap[item] = amount
+//    problem here is it can only add one entry
+//    can't figure out how to add many entries
+    cartHashmap.forEach{ (key, value) -> logger.info {"Item:$key, amount: $value" }  }
+}
 
+fun checkOut(cartHashmap: HashMap<String, Int>){
+    for(entries in cartHashmap){
+        cartHashmap.values.sum()
+    }
+}
+
+fun removeFromCart (cartHashmap: HashMap<String, Int> = HashMap(),item: String){
+    if (cartHashmap.containsKey(item)){
+        cartHashmap.remove(item)
+    }
 }
