@@ -11,6 +11,11 @@ fun main() {
      * Then, your application will print all the prime numbers starting
      * from the lower number up to the largest number.
      */
+//More efficient code is to make an arrayList of prime numbers and check if it matches within the range of
+//    the entries
+
+//    Compare which entry is higher/larger between the two entries
+//    turn a to b range if a is higher than b and b to a range if the other way around
 
 //    SOLUTION
     logger.info { "Welcome to Activity 01 H" }
