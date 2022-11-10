@@ -51,9 +51,8 @@ fun main() {
 // we create a new read line for divisor input
         if (userInputDivisor != null && userInputDivisor.all { char -> char.isDigit() } ) {
             val userInputInt = userInputDivisor.toIntOrNull()
-            userInputArrayList.add(userInputDivisor)
 
-            if (userInputInt != null) {
+            if (userInputInt != null ) {
                 val total = sum / userInputInt
                 logger.info { "The total is : $total" }
             } else {
