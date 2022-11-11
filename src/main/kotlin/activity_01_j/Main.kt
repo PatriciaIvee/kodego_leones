@@ -31,6 +31,6 @@ fun main() {
 
 //Cart List
 
-    val prices = ArrayList<Double>()
-    var totalPrice = prices.sum()
+    val prices = HashMap<String,Double>()
+    var totalPrice = prices.values.sum()
 }
