@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial answer for activity_03_a Main.kt">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="Added Classes_2.kt and ObjectOrientedPrinciples.kt">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_04_a/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_04_b/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/activity_04_c/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/exercise_object_oriented_programming/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_03_a/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_03_a/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/activity_01_j/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/activity_01_j/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -65,23 +69,21 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="DataStructure3Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="notes.DataStructure3Kt" />
-      <module name="KodeGoExercisesLeones.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LENOVO\Desktop\KodeGoExercisesLeones\src\main\kotlin\Exercise_Object_Oriented_Programming" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.MainKt (1)">
     <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="activity_01_f.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="activity_03_c.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MainKt (3)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="activity_01_h.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="activity_01_d.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,8 +96,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainKt (5)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="activity_01_f.MainKt" />
+      <module name="KodeGoExercisesLeones.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="activity_03_a.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="activity_01_h.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Kotlin.MainKt (4)" />
-        <item itemvalue="Kotlin.DataStructure3Kt" />
-        <item itemvalue="Kotlin.MainKt (3)" />
         <item itemvalue="Kotlin.MainKt (1)" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Kotlin.MainKt (5)" />
+        <item itemvalue="Kotlin.MainKt (3)" />
+        <item itemvalue="Kotlin.MainKt (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -119,97 +128,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00030" summary="updated code with !! in variables Activity 01 d in Canvas">
-      <created>1665488224541</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1665488224541</updated>
-    </task>
-    <task id="LOCAL-00031" summary="added peso sign to print lines">
-      <created>1665491520916</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1665491520916</updated>
-    </task>
-    <task id="LOCAL-00032" summary="turned single line comments to block comments">
-      <created>1665497768592</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1665497768592</updated>
-    </task>
-    <task id="LOCAL-00033" summary="changed var to val line 9">
-      <created>1665497847342</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1665497847342</updated>
-    </task>
-    <task id="LOCAL-00034" summary="updated Main.kt activity_01_d">
-      <created>1665659250033</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1665659250033</updated>
-    </task>
-    <task id="LOCAL-00035" summary="added and updated notes about loops, if else function, parse int etc.">
-      <created>1665740602482</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1665740602482</updated>
-    </task>
-    <task id="LOCAL-00036" summary="For logging in Kotlin or in apps. Logging is more important than println">
-      <created>1665750488187</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1665750488187</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Added second possible solution to Activity 01 D in Canvas. &#10;Changed println to logger.info">
-      <created>1665765174194</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1665765174194</updated>
-    </task>
-    <task id="LOCAL-00038" summary="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0.">
-      <created>1665998438409</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1665998438409</updated>
-    </task>
-    <task id="LOCAL-00039" summary="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Seems fine for now 0_0.">
-      <created>1665998712034</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1665998712034</updated>
-    </task>
-    <task id="LOCAL-00040" summary="This is my solution as of 10-17-2022 for Activity 01 D. I did while loops with if statements inside. Turned var to val.">
-      <created>1665998857351</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1665998857351</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Added Instructions for Activities from Canvas.">
-      <created>1665999381596</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1665999381596</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Added DataStructure3.kt for notes">
-      <created>1666000033229</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1666000033229</updated>
     </task>
     <task id="LOCAL-00043" summary="Added DataStructure3.kt for notes">
       <created>1666003924931</created>
@@ -463,7 +381,98 @@
       <option name="project" value="LOCAL" />
       <updated>1667660524941</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="added partial answer for activity_03_a Main.kt">
+      <created>1667749493738</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1667749493738</updated>
+    </task>
+    <task id="LOCAL-00080" summary="added answer for activity_03_a Main.kt">
+      <created>1667784464865</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1667784464866</updated>
+    </task>
+    <task id="LOCAL-00081" summary="added answer for activity_03_b Main.kt">
+      <created>1667784494113</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1667784494114</updated>
+    </task>
+    <task id="LOCAL-00082" summary="added partial answer for activity_03_b Main.kt">
+      <created>1667784518319</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1667784518319</updated>
+    </task>
+    <task id="LOCAL-00083" summary="added answer for activity_03_b Main.kt">
+      <created>1667817547586</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1667817547586</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Checked by sir Mac :). added if (condition != 0) line 58-65">
+      <created>1667903212208</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1667903212209</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Edited answer for activity 01 i Main.kt">
+      <created>1668073984013</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1668073984013</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Edited answer for activity 01 j Main.kt">
+      <created>1668074367621</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1668074367621</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Added notes to change answer for activity 01 j Main.kt">
+      <created>1668074434477</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1668074434477</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Added partial answer to change answer for activity 03 c Main.kt">
+      <created>1668075246466</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1668075246466</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Added notes to improve answer for activity 01 h Main.kt">
+      <created>1668075551067</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1668075551067</updated>
+    </task>
+    <task id="LOCAL-00090" summary="removed line 54. to be edited">
+      <created>1668075712507</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1668075712507</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Added Classes_2.kt and ObjectOrientedPrinciples.kt">
+      <created>1668085326614</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1668085326614</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,17 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Main.kt package activity_01_f&#10;Added Main.kt package activity.01_g" />
-    <MESSAGE value="Added Main.kt package activity_01_f partial answer&#10;Added Main.kt package activity_01_g answer&#10;Added Main.kt package activity_01_h partial answer" />
-    <MESSAGE value="changed println to logger.info" />
-    <MESSAGE value="refactored var theChar to character" />
-    <MESSAGE value="changed comment line" />
-    <MESSAGE value="Added loop Solution to activity_01_g Main.kt" />
-    <MESSAGE value="Added loop Solution to activity_01_F Main.kt&#10;logger.info for Unique Keys" />
-    <MESSAGE value="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Unique Keys" />
-    <MESSAGE value="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Prime numbers" />
-    <MESSAGE value="Added loop Solution to activity_01_H Main.kt&#10;Added some comment line" />
-    <MESSAGE value="Added loop Solution to activity_01_F Main.kt&#10;Added some space line 44" />
     <MESSAGE value="Added package activity_01_i - activity_01_j&#10;Added package activity_02_a - package activity_02_d.&#10;All packages contain Main.kt" />
     <MESSAGE value="Added instruction details for package activity_01_i - activity_01_j&#10;and package activity_02_a - package activity_02_d." />
     <MESSAGE value="added partial answers for activity 01 i Main.kt" />
@@ -503,6 +501,17 @@
     <MESSAGE value="added activity_03_a, activity_03_b, and activity_03_c instructions and partial answers." />
     <MESSAGE value="edited Classes_Exercise.kt" />
     <MESSAGE value="added partial answer for activity_03_a Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added partial answer for activity_03_a Main.kt" />
+    <MESSAGE value="added answer for activity_03_a Main.kt" />
+    <MESSAGE value="added partial answer for activity_03_b Main.kt" />
+    <MESSAGE value="added answer for activity_03_b Main.kt" />
+    <MESSAGE value="Checked by sir Mac :). added if (condition != 0) line 58-65" />
+    <MESSAGE value="Edited answer for activity 01 i Main.kt" />
+    <MESSAGE value="Edited answer for activity 01 j Main.kt" />
+    <MESSAGE value="Added notes to change answer for activity 01 j Main.kt" />
+    <MESSAGE value="Added partial answer to change answer for activity 03 c Main.kt" />
+    <MESSAGE value="Added notes to improve answer for activity 01 h Main.kt" />
+    <MESSAGE value="removed line 54. to be edited" />
+    <MESSAGE value="Added Classes_2.kt and ObjectOrientedPrinciples.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Classes_2.kt and ObjectOrientedPrinciples.kt" />
   </component>
 </project>
