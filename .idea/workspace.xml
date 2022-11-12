@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added solution 1 2 and 3 to activity 01 h Main.kt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial solution activity 04 b Main.kt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,13 +121,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Added Main.kt package activity_01_f partial answer&#10;Added Main.kt package activity_01_g answer&#10;Added Main.kt package activity_01_h partial answer">
-      <created>1666276650495</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1666276650495</updated>
     </task>
     <task id="LOCAL-00049" summary="changed println to logger.info">
       <created>1666276897478</created>
@@ -467,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668244881521</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="added partial solution activity 04 b Main.kt">
+      <created>1668253446119</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1668253446119</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -482,7 +480,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added partial answers for activity 02 a Main.kt, activity 02 b Main.kt and activity 02 c Main.kt" />
     <MESSAGE value="added partial answer for activity 02 d Main.kt," />
     <MESSAGE value="added notes topic Functions" />
     <MESSAGE value="added notes topic classes in Functions_02.kt" />
@@ -507,6 +504,7 @@
     <MESSAGE value="changed answer for activity 01 f Main.kt&#10;added solution 2 and partial solution 3" />
     <MESSAGE value="added partial solution for activity 03 c" />
     <MESSAGE value="added solution 1 2 and 3 to activity 01 h Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added solution 1 2 and 3 to activity 01 h Main.kt" />
+    <MESSAGE value="added partial solution activity 04 b Main.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="added partial solution activity 04 b Main.kt" />
   </component>
 </project>
