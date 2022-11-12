@@ -1,7 +1,6 @@
 package activity_03_c
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int
-import com.sun.tools.javac.jvm.PoolConstant.LoadableConstant.Int
+
 import mu.KotlinLogging
 
 private val logger = KotlinLogging.logger{}
