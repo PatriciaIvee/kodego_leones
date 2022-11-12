@@ -1,6 +1,6 @@
 package activity_04_b
 
-import java.time.Year
+
 import java.util.Date
 
 /**
@@ -42,7 +42,41 @@ class Book {
     var chapters:ArrayList<String> = ArrayList()
     var pages: Int = 0
 
-    class Authors{
+}
+
+class Authors{
+    var lastName: String = ""
+    var firstName: String = ""
+    var middleName: String = ""
+    var birthDate = Date()
+}
+
+class Magazine {
+    var editor: String = ""
+    var title: String = ""
+    var monthPublished =""
+    var yearPublished:Int = 0
+    var articles: ArrayList<Article> = ArrayList()
+}
+
+class Newspaper {
+    var name: String = ""
+    var dayPublished: Int = 0
+    var monthPublished:String = ""
+    var yearPublished: Int = 0
+    var headline: String = ""
+    var articles: ArrayList<Article> = ArrayList()
+
+}
+
+class Comics {
+    var comicTitle: String = ""
+    var monthPublished = ""
+    var yearPublished:Int = 0
+    var illustrators:ArrayList<Illustrators> = ArrayList()
+    var publisher: ArrayList<Publishers> = ArrayList()
+
+    class Illustrators {
         var lastName: String = ""
         var firstName: String = ""
         var middleName: String = ""
@@ -50,6 +84,23 @@ class Book {
     }
 }
 
-class Magazine {
-
+class Article {
+    var articleTitle: String = ""
+    var content: String = ""
+    var author: ArrayList<Authors> = ArrayList()
 }
+
+class Publishers {
+    var name: String = ""
+    var address: String = ""
+    var dateEstablished = Date()
+}
+
+class AudioVideoRecording {
+    var containsVideoRecording: Boolean = false
+    var containsAudioVideoRecording: Boolean = false
+    var containsBothVideoAudioVideoRecording: Boolean = false
+}
+
+fun searchTitle(){}
+fun listThis(){}
