@@ -23,6 +23,9 @@ package exercise_object_oriented_programming
 
 fun main() {
 
+
+    Product("Mango",120.00)
+
 }
 open class Product {
     var name:String = ""
