@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="removed solution for activity 02 d Main.kt">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added solution to exercise_object_oriented_programming Main.kt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise_object_oriented_programming/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exercise_object_oriented_programming/Main.kt" afterDir="false" />
     </list>
@@ -124,13 +124,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00051" summary="changed comment line">
-      <created>1666277069496</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1666277069496</updated>
     </task>
     <task id="LOCAL-00052" summary="Added loop Solution to activity_01_g Main.kt">
       <created>1666337588087</created>
@@ -468,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668254312858</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="added solution to exercise_object_oriented_programming Main.kt">
+      <created>1668428869473</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1668428869474</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added notes topic classes in Functions_02.kt" />
     <MESSAGE value="added Classes_Exercise.kt with class personalInformation, class education, class employment and class references" />
     <MESSAGE value="incomplete notes about classes" />
     <MESSAGE value="added activity_03_a, activity_03_b, and activity_03_c instructions and partial answers." />
@@ -508,6 +507,7 @@
     <MESSAGE value="added partial solution activity 04 b Main.kt" />
     <MESSAGE value="added partial solution activity 04 c Main.kt" />
     <MESSAGE value="removed solution for activity 02 d Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed solution for activity 02 d Main.kt" />
+    <MESSAGE value="added solution to exercise_object_oriented_programming Main.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="added solution to exercise_object_oriented_programming Main.kt" />
   </component>
 </project>

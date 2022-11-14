@@ -20,6 +20,10 @@ package exercise_object_oriented_programming
  */
 //need to implement polymorphism
 //abstraction is get and set
+
+fun main() {
+
+}
 open class Product {
     var name:String = ""
         private set //var name cannot be changed
