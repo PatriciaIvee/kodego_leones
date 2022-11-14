@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial solution activity 04 b Main.kt" />
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="removed solution for activity 02 d Main.kt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise_object_oriented_programming/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exercise_object_oriented_programming/Main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,20 +124,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00049" summary="changed println to logger.info">
-      <created>1666276897478</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1666276897479</updated>
-    </task>
-    <task id="LOCAL-00050" summary="refactored var theChar to character">
-      <created>1666276986357</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1666276986357</updated>
     </task>
     <task id="LOCAL-00051" summary="changed comment line">
       <created>1666277069496</created>
@@ -465,7 +454,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668253446119</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="added partial solution activity 04 c Main.kt">
+      <created>1668254156863</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1668254156863</updated>
+    </task>
+    <task id="LOCAL-00099" summary="removed solution for activity 02 d Main.kt">
+      <created>1668254312858</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1668254312858</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,8 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added partial answer for activity 02 d Main.kt," />
-    <MESSAGE value="added notes topic Functions" />
     <MESSAGE value="added notes topic classes in Functions_02.kt" />
     <MESSAGE value="added Classes_Exercise.kt with class personalInformation, class education, class employment and class references" />
     <MESSAGE value="incomplete notes about classes" />
@@ -505,6 +506,8 @@
     <MESSAGE value="added partial solution for activity 03 c" />
     <MESSAGE value="added solution 1 2 and 3 to activity 01 h Main.kt" />
     <MESSAGE value="added partial solution activity 04 b Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added partial solution activity 04 b Main.kt" />
+    <MESSAGE value="added partial solution activity 04 c Main.kt" />
+    <MESSAGE value="removed solution for activity 02 d Main.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed solution for activity 02 d Main.kt" />
   </component>
 </project>
