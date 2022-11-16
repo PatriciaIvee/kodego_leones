@@ -67,7 +67,7 @@ class Mitsubishi:Car{
 open class Person{
     var firstName = ""
         get() = field
-        set(value){
+        private set(value){
             field = value
         }
 // Encapsulation: you can set "set" to private to limit access to the variable
@@ -80,21 +80,28 @@ open class Person{
     private fun setAge(){ /*should be private so no one can change it*/ }
     public fun fullName() = "$lastName, $firstName $middleName "
 //    by default every class is public
+    constructor()
+    constructor(firstname:String,lastname:String){
+        this.firstName = firstName
+        this.lastName = lastName
+    }
 
 }
 
-class Student:Person(){
-
+class Student(firstname:String,lastname:String):Person(){
+    var gradeLevel: String = ""
 }
 
-class Parent:Person(){
-
+class Parent(firstname:String,lastname:String):Person(){
+    var parentInfo: String = ""
 }
 interface Dancer{
     fun dancer(){}
 }
 
-class TeacherAgain:Person(){}
+class TeacherAgain(firstname:String,lastname:String):Person(){
+    var section : String = ""
+}
 
 class Robot: Person(),Dancer, Car{
     override fun turnRightSignal() {
@@ -122,16 +129,40 @@ abstract class Employee:Person(){
 //Polymorphism
 
 fun main() {
-    var teacher: Teacher = Teacher()
-    var student: Student = Student()
-    var parent: Parent = Parent()
-    var robot: Robot = Robot()
-    var person = Person()
+//    var teacher: Teacher = Teacher()
+//    var student: Student = Student()
+//    var parent: Parent = Parent()
+//    var robot: Robot = Robot()
+//    var person = Person()
 
 //    parent = Person()
 //    teacher = Person()
 //    student = Person()
 //    robot = Person()
 //    you can make the teacher a person,but you cannot make person as a teacher
+
+    var population: ArrayList<Person> = ArrayList()
+    population.add(Student("Janreign","Aragon"))
+    population.add(Parent("Victor","Yu"))
+    population.add(TeacherAgain("Pat","Leones"))
+
+    for(individual in population){
+        println("Class:${individual.javaClass.toString()}")
+//        println(individual.fullname())
+
+        when(individual){
+            is Student -> {
+                println("Student:${individual.fullName()}")
+                var student = individual as Student
+                student.gradeLevel = ""
+            }
+            is Parent ->
+                println("Parent:${individual.fullName()}")
+            is TeacherAgain ->
+                println("Teacher:${individual.fullName()}")
+            else ->
+                println("Error Occurred")
+        }
+    }
 }
 
