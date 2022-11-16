@@ -23,21 +23,39 @@ package exercise_object_oriented_programming
 
 fun main() {
 
+    var fruits = ArrayList<Fruits>()
+    fruits.add(Fruits("Banana", 13.00))
+    fruits.add(Fruits("Mango",23.00))
+    fruits.add(Fruits("Orange",13.00))
+    fruits.add(Fruits("Watermelon",22.00))
+    fruits.add(Fruits("Strawberry", 14.00))
 
-    Product("Mango",120.00)
+    var shake = ArrayList<Shake>()
+    shake.add(Shake("Watermelon Shake", 55.00))
+    shake.add(Shake("Mango Graham Shake", 65.00))
+    shake.add(Shake("Orange Smoothie", 45.00))
+    shake.add(Shake("Banana Milkshake", 45.00))
+    shake.add(Shake("Strawberry Milkshake", 65.00))
+
+    var juices = ArrayList<Juices>()
+
+    juices.add(Juices("Orange Juice", 34.00))
+    juices.add(Juices("Pineapple Juice", 44.00))
+    
+
 
 }
 open class Product {
-    var name:String = ""
-        private set //var name cannot be changed
-    var price: Double = 0.0
+     var name:String = ""
+        private set //var name is hidden
+     var price: Double = 0.0
 
     constructor(name: String, price: Double){
         this.name = name
         this.price = price
     }
-}
 
+}
 
 class Fruits(name : String, price: Double):Product(name, price) {
     var quantity: Float = 0.0F
@@ -52,13 +70,12 @@ class Shake(name : String, price: Double):Product(name, price) {
 }
 
 class Juices(name : String, price: Double):Product(name, price) {
-
     var size: Any  = ""
     var ingredients : ArrayList<String> = ArrayList()
 }
 
-data class Sandwiches(val name: String) {
-    var price: Double = 0.0
+ class Sandwiches(name : String, price: Double):Product(name, price) {
+
     var ingredients : ArrayList<String> = ArrayList()
     var addons : ArrayList<Any> = ArrayList()
     var breadType: Any = ""
