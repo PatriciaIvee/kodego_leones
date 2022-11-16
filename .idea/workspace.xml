@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added solution to exercise_object_oriented_programming Main.kt">
+    <list default="true" id="7ab54678-7683-45a3-b44b-8a2fb8370b4a" name="Changes" comment="added partial answer for exercise object-oriented programming Main.kt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/exercise_object_oriented_programming/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/exercise_object_oriented_programming/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
       <recent name="C:\Users\LENOVO\Desktop\KodeGoExercisesLeones\src\main\kotlin\Exercise_Object_Oriented_Programming" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager">
     <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="activity_03_c.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
@@ -77,15 +78,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt (3)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="activity_01_d.MainKt" />
+    <configuration name="MainKt (2)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercise_object_oriented_programming.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt (4)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="activity_02_d.MainKt" />
+    <configuration name="MainKt (3)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="activity_01_d.MainKt" />
       <module name="KodeGoExercisesLeones.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,11 +108,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt (2)" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.MainKt (5)" />
         <item itemvalue="Kotlin.MainKt (1)" />
         <item itemvalue="Kotlin.MainKt (3)" />
-        <item itemvalue="Kotlin.MainKt (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -123,34 +124,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665056101826</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Added loop Solution to activity_01_F Main.kt&#10;logger.info for Unique Keys">
-      <created>1666339822504</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1666339822504</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Unique Keys">
-      <created>1666342691292</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1666342691292</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Added loop Solution to activity_01_H Main.kt&#10;logger.info for Prime numbers">
-      <created>1666342745329</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1666342745329</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Added loop Solution to activity_01_H Main.kt&#10;Added some comment line">
-      <created>1666342797412</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1666342797412</updated>
     </task>
     <task id="LOCAL-00057" summary="Added loop Solution to activity_01_F Main.kt&#10;Added some space line 44">
       <created>1666342849507</created>
@@ -467,7 +440,35 @@
       <option name="project" value="LOCAL" />
       <updated>1668429004250</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="added solution to exercise_object_oriented_programming Main.kt">
+      <created>1668436352343</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1668436352343</updated>
+    </task>
+    <task id="LOCAL-00103" summary="added solution to activity 04 c Main.kt">
+      <created>1668513192588</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1668513192588</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Notes for OOP">
+      <created>1668608094909</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1668608094910</updated>
+    </task>
+    <task id="LOCAL-00105" summary="added partial answer for exercise object-oriented programming Main.kt">
+      <created>1668609009277</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1668609009277</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -482,9 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added Classes_Exercise.kt with class personalInformation, class education, class employment and class references" />
-    <MESSAGE value="incomplete notes about classes" />
-    <MESSAGE value="added activity_03_a, activity_03_b, and activity_03_c instructions and partial answers." />
     <MESSAGE value="edited Classes_Exercise.kt" />
     <MESSAGE value="added partial answer for activity_03_a Main.kt" />
     <MESSAGE value="added answer for activity_03_a Main.kt" />
@@ -507,6 +505,30 @@
     <MESSAGE value="added partial solution activity 04 c Main.kt" />
     <MESSAGE value="removed solution for activity 02 d Main.kt" />
     <MESSAGE value="added solution to exercise_object_oriented_programming Main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added solution to exercise_object_oriented_programming Main.kt" />
+    <MESSAGE value="added solution to activity 04 c Main.kt" />
+    <MESSAGE value="Notes for OOP" />
+    <MESSAGE value="added partial answer for exercise object-oriented programming Main.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="added partial answer for exercise object-oriented programming Main.kt" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/notes/ObjectOrientedPrinciples.kt</url>
+          <line>144</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/notes/ObjectOrientedPrinciples.kt</url>
+          <line>145</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/notes/ObjectOrientedPrinciples.kt</url>
+          <line>146</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

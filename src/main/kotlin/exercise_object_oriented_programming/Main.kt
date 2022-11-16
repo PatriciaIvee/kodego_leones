@@ -38,11 +38,25 @@ fun main() {
     shake.add(Shake("Strawberry Milkshake", 65.00))
 
     var juices = ArrayList<Juices>()
-
     juices.add(Juices("Orange Juice", 34.00))
     juices.add(Juices("Pineapple Juice", 44.00))
-    
+    juices.add(Juices("Kiwi Juice", 76.00))
+    juices.add(Juices("Blueberry Juice", 88.00))
+    juices.add(Juices("Peach Juice",78.00))
 
+    var sandwiches = ArrayList<Sandwiches>()
+    sandwiches.add(Sandwiches("Bacon and Cheese Sandwich", 65.00))
+    sandwiches.add(Sandwiches("Ham and Egg Sandwich", 75.00))
+    sandwiches.add(Sandwiches("Smoked Salmon Sandwich", 99.00))
+    sandwiches.add(Sandwiches("Strawberry and Kiwi Sandwich", 78.00))
+    sandwiches.add(Sandwiches("Cheese Overload Sandwich", 86.00))
+
+    var salad = ArrayList<Salad>()
+    salad.add(Salad("Caesar Salad", 120.00))
+    salad.add(Salad("Greek Salad", 130.00))
+    salad.add(Salad("Ensaladang Mangga", 100.00))
+    salad.add(Salad("Chicken Salad", 115.00))
+    salad.add(Salad("Cobb Salad", 140.00))
 
 }
 open class Product {
@@ -75,7 +89,6 @@ class Juices(name : String, price: Double):Product(name, price) {
 }
 
  class Sandwiches(name : String, price: Double):Product(name, price) {
-
     var ingredients : ArrayList<String> = ArrayList()
     var addons : ArrayList<Any> = ArrayList()
     var breadType: Any = ""
