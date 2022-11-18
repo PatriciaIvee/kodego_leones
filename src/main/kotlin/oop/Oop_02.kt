@@ -1,17 +1,15 @@
 package oop
 
-import notes.Parent
-import notes.Person
-import notes.Student
-import notes.TeacherAgain
 import java.util.*
+
+interface GuidanceCounselor{
+    var something: String
+    fun doConsult()
+}
 
 open class Person{
     var firstName = ""
-        get() = field
-        private set(value){
-            field = value
-        }
+        private set
 // Encapsulation: you can set "set" to private to limit access to the variable
 
     var middleName = ""
@@ -22,34 +20,65 @@ open class Person{
     private fun setAge(){ /*should be private so no one can change it*/ }
     public fun fullName() = "$lastName, $firstName $middleName "
     //    by default every class is public
-    constructor()
-    constructor(firstname:String,lastname:String){
+//    constructor()
+    constructor(firstName:String,lastName:String){
         this.firstName = firstName
         this.lastName = lastName
     }
 
 }
 
-class Student(firstname:String,lastname:String): Person(){
+class Student(firstName:String,lastName:String): Person(firstName, lastName){
     var gradeLevel: String = ""
 }
 
-class Parent(firstname:String,lastname:String): Person(){
+class Parent(firstName:String,lastName:String): Person(firstName, lastName){
     var parentInfo: String = ""
 }
 interface Dancer{
     fun dancer(){}
 }
-
-class TeacherAgain(firstname:String,lastname:String): Person(){
+//Multiple inheritance interface
+class Teacher(firstName:String,lastName:String): Person(firstName, lastName), GuidanceCounselor{
     var section : String = ""
+    override var something: String
+        get() = TODO("Not yet implemented")
+        set(value) {}
+    override fun doConsult(){
+        TODO()
+    }
+}
+
+class TeacherCounselor(firstName: String,lastName: String): Person(firstName,lastName), GuidanceCounselor{
+    override var something: String
+        get() = TODO("Not yet implemented")
+        set(value) {}
+    override fun doConsult() {
+        TODO("Not yet implemented")
+    }
+}
+
+abstract class SubstituteTeacher{
+    abstract fun teacherClass()
+
+    fun teach(){
+
+    }
+
+//            you can inherit and instantiate abstract class
 }
 
 fun main() {
-var population: ArrayList<Person> = ArrayList()
-population.add(Student("Janreign","Aragon"))
-population.add(Parent("Victor","Yu"))
-population.add(TeacherAgain("Pat","Leones"))
+    var population: ArrayList<Person> = ArrayList()
+
+    var person: Person = Student("Janreign","Aragon")
+    population.add(person)
+
+    person = Parent("Victor","Yu")
+    population.add(person)
+
+    person = Teacher("Pat","Lee")
+    population.add(person)
 
 for(individual in population){
     println("Class:${individual.javaClass.toString()}")
@@ -63,10 +92,19 @@ for(individual in population){
         }
         is Parent ->
             println("Parent:${individual.fullName()}")
-        is TeacherAgain ->
+        is Teacher ->
             println("Teacher:${individual.fullName()}")
+        is TeacherCounselor ->{
+
+        }
+        is SubstituteTeacher ->{
+
+        }
         else ->
             println("Error Occurred")
+
     }
+
 }
+//    Polymorph stuff
 }
