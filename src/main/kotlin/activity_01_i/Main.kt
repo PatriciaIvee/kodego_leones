@@ -60,8 +60,8 @@ fun main() {
     books["Harry Potter and Goblet of Fire"] = "Available"
     books["Harry Potter and the Philosopher's Stone"] = "Available"
     books["How to Kill a Mockingbird"] = "Available"
-    books["1984"] = "Out"
-    books["The Lord of The Rings"] = "Out"
+    books["1984"] = "Not Available"
+    books["The Lord of The Rings"] = "Not Available"
     books["The Great Gatsby"] = "Available"
 
 //    show all books
