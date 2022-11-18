@@ -25,78 +25,110 @@ fun main() {
 
 
 //    Code it
-    logger.info { "Welcome to Activity 01 i! Please Enter your username and password:" }
-    val userName = readln()
-    val password = readln()
-    val logInInfo= HashMap<String, String>()
-    logInInfo[userName] = password
 
+    val logInInfo = HashMap<String, String>()
+    logInInfo["Admin"] = "0000"
+    logInInfo["Guest"] = "0000"
+
+    logger.info { "Welcome to Activity 01 i! " }
+
+//    loop to enter username and password
+    logger.info { "Please Enter your username" }
+    var userName = readln()
+    logger.info { "Please enter password:" }
+    var password = readln()
+    while (userName !in logInInfo){
+        while (userName !in logInInfo || password != logInInfo.getValue(userName)){
+            logger.info { "Not correct username and password" }
+            logger.info { "Enter Username" }
+            userName = readln()
+            logger.info { "Enter password" }
+            password = readln()
+            if (userName !in logInInfo || password != logInInfo.getValue(userName)){
+                logger.info { "Incorrect password for $userName" }
+                logger.info { "Enter password" }
+                password = readln()
+            }
+        }
+
+    }
+//    welcome the user
+    logger.info { "Welcome $userName!" }
+
+//    hashmap books
     val books = HashMap<String, String>()
     books["Harry Potter and Goblet of Fire"] = "Available"
     books["Harry Potter and the Philosopher's Stone"] = "Available"
     books["How to Kill a Mockingbird"] = "Available"
-    books["1984"] = "Not Available"
-    books["The Lord of The Rings"] = "Not Available"
+    books["1984"] = "Out"
+    books["The Lord of The Rings"] = "Out"
     books["The Great Gatsby"] = "Available"
 
+//    show all books
     logger.info { "Showing books" }
-    for (entry in books.entries){
-        logger.info { "Book Title:${ entry.key } , Status:${entry.value}" }
+    for (entry in books.entries) {
+        logger.info { "Book Title:${entry.key} , Status:${entry.value}" }
     }
+
+//    check available books
     logger.info { "Available books to borrow" }
-    for (entry in books.entries){
-        if (entry.value == "Available"){
+    for (entry in books.entries) {
+        if (entry.value == "Available") {
             logger.info { entry.key }
         }
     }
 
+//hashmap books
+    val borrowBooks = HashMap<String, String>()
 
-    val borrowBooks = HashMap<String,String>()
+//    date formatter
     val formatter = DateTimeFormatter.ISO_DATE
     val startDate = LocalDateTime.now()
+//    date entry for borrowing
     val startDateFormatted = startDate.format(formatter)
+
+//    deadline to return book one week(7 days)
     val endDate = startDate.plusDays(7)
     val endDateFormatted = endDate.format(formatter)
 
-    var index = 0
+// loop yes or no then input book title with checking if it is available
+    var input = ""
+    while (input != "n") {
+        logger.info { "Enter Book title to borrow:" }
+        val inputBookTitle = readln()
 
-    while (index == 0){
-        logger.info { "Hello $userName! Would you like to borrow a book? Y/N" }
-        val input = readLine()
-        index = when (input) {
-            "Y", "y" -> {
+        if (inputBookTitle in books) {
 
-                logger.info { "Enter Book title to borrow:" }
-                    val inputBookTitle = readln()
-
-                    if (inputBookTitle in books.keys ){
-                        borrowBooks[inputBookTitle] = "Borrowed"
-                    } else {
-                        logger.info { "$inputBookTitle is not in the books or is not available." }
-                    }
-
-                logger.info { "Burrowed Books:" }
-                for(entry in borrowBooks.entries){
-                    logger.info { "Book Title:${ entry.key } , Status:${entry.value}" }
-
-                    logger.info { "Date Borrowed: $startDateFormatted" }
-                    logger.info { "Borrow until: $endDateFormatted" }
-                }
-
-                1
-
+            if (books[inputBookTitle] == "Available") {
+                borrowBooks[inputBookTitle] = "Borrowing"
+                logger.info { "$inputBookTitle is added in your borrowed books." }
+            } else {
+                logger.info { "$inputBookTitle is not available for borrowing." }
             }
 
-            "N", "n" -> {
-                logger.info { "Thank you Have a nice day" }
-                1
-            }
-
-            else -> {
-                logger.info { "Please enter Y/y or N/n" }
-                0
-            }
+        } else {
+            logger.info { "$inputBookTitle is not in the book list." }
         }
+
+        logger.info { "Hello $userName! Would you like to borrow a book? Y/N" }
+        input = readln()
+        while (input != "y" && input != "n") {
+            logger.info { "please enter y or n" }
+            input = readln()
+        }
+
+
     }
 
+    logger.info { "Burrowed Books:" }
+    for (entry in borrowBooks.entries) {
+        logger.info { "Book Title:${entry.key} , Status:${entry.value}" }
+
+        logger.info { "Date Borrowed: $startDateFormatted" }
+        logger.info { "Borrow until: $endDateFormatted" }
+    }
+
+
 }
+
+
