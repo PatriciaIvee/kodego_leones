@@ -20,17 +20,107 @@ fun main() {
     hence the total amount of the grocery items.
     5. User can log out of the program/system once he is done.
      */
+////Log in HashMap (Username and Password)
+//    val logInInfo = HashMap<String, String>()
+//    logInInfo["Cashier"] = "0000"
+//    logInInfo["Guest"] = "0000"
 //
+//
+////    Log in process
+//
+//    logger.info { "Please Enter your Username" }
+//    var userName = readln()
+//    logger.info { "Please enter password:" }
+//    var password = readln()
+//    while (userName !in logInInfo){
+//        while (userName !in logInInfo || password != logInInfo.getValue(userName)){
+//            logger.info { "Not correct username and password" }
+//            logger.info { "Enter Username" }
+//            userName = readln()
+//            logger.info { "Enter password" }
+//            password = readln()
+//            if (userName !in logInInfo || password != logInInfo.getValue(userName)){
+//                logger.info { "Incorrect password for $userName" }
+//                logger.info { "Enter password" }
+//                password = readln()
+//            }
+//        }
+//
+//    }
+////    welcome the user
+//    logger.info { "Welcome $userName!" }
 
-//    Log in process
-    val logInGroceryCart : Map<String, String> = mutableMapOf(("Cashier" to "12345"),("guest" to "12345")) // username(K) and password (V)
-    if (logInGroceryCart.equals("Cashier" to "12345")){
-        logger.info{"Welcome${logInGroceryCart["Cashier"]}"}
-        var groceryCart = mutableMapOf<String, Int>() // the item (K) and number of items(V)
-    }
-
-//Cart List
+//Grocery Price HashMap
 
     val prices = HashMap<String,Double>()
+    prices["Apple"] = 20.00
+    prices["Gardenia Clsc White Bread Reg "] = 85.50
+    prices["Coco Mama Fresh Gata 200ML"] = 30.75
+    prices["Maling Chicken L/Meat 397 G"] = 115.95
+    prices["Iodized Salt 1KG"] = 29.00
+    prices["Isopropyl Alcohol 500 ML"] = 90.35
+    prices["Baby Dobe Hair to Toe Baby Wash Sensitive Moisture 400ML"] = 334.95
+    prices["J&J Johnson's Milk Rice Baby Bath Refill 200ML"] = 75.19
+    prices["Bear Brand Junior 1+ Plain 2.4KG"] =1119.10
+    prices["Cerelac Infant Cereals Rice and Soya 250G"] = 143.15
+    prices["ISOMIL Two for Kids 1-3 Years Old Plain 850G"] = 1175.65
+    prices["Nestle Chuckie My Chocolate Buddy 110ML"] = 14.55
+    prices["Ricoa Rich Chocolate 1KG"] = 499.95
+    prices["Ovaltine Ready Mixed Malt Chocolate 260G"] = 75.75
+
     var totalPrice = prices.values.sum()
+
+//    HashMap Cart
+    val groceryCart = HashMap<String, Double>()
+    val groceryCartAdd = HashMap<String, Int>()
+
+    var input = ""
+    var inputAddToCart = ""
+    var inputAmountAddToCart = 0
+    while (input != "n") {
+        logger.info { "Add to Cart Item" }
+         inputAddToCart = readln()
+        logger.info { "Add Amount to Item" }
+         inputAmountAddToCart = readln().toInt()
+
+        if (inputAddToCart in prices){
+            groceryCartAdd[inputAddToCart] = inputAmountAddToCart
+            groceryCart[inputAddToCart] = prices.getValue(inputAddToCart) * groceryCartAdd.getValue(inputAddToCart)
+            logger.info { "$inputAddToCart Price:${prices.getValue(inputAddToCart)} Amount:${groceryCartAdd.getValue(inputAddToCart)} Total: ${prices.getValue(inputAddToCart) * groceryCartAdd.getValue(inputAddToCart)}" }
+        }else{
+            logger.info { "item not in prices" }
+        }
+        logger.info { "Enter another item? y/n" }
+        input = readln()
+        while (input != "y" && input != "n") {
+            logger.info { "please enter y or n" }
+            input = readln()
+        }
+
+//        if (inputAddToCart in prices) {
+//
+//            if (books[inputAddToCart] == "Available") {
+//                borrowBooks[inputAddToCart] = "Borrowing"
+//                logger.info { "$inputAddToCart is added in your borrowed books." }
+//            } else {
+//                logger.info { "$inputAddToCart is not available for borrowing." }
+//            }
+//
+//        } else {
+//            logger.info { "$inputAddToCart is not in the book list." }
+//        }
+//
+//        logger.info { "Hello $userName! Would you like to borrow a book? Y/N" }
+//        input = readln()
+//        while (input != "y" && input != "n") {
+//            logger.info { "please enter y or n" }
+//            input = readln()
+//        }
+
+
+    }
+    for(entry in groceryCart){
+        logger.info { groceryCart.entries }
+        logger.info { "${entry.key},Price:${prices.getValue(inputAddToCart)} Amount: ${groceryCartAdd.getValue(inputAddToCart)} Total: ${entry.value}" }
+    }
 }
