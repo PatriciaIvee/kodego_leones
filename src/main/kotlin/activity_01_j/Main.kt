@@ -20,35 +20,35 @@ fun main() {
     hence the total amount of the grocery items.
     5. User can log out of the program/system once he is done.
      */
-////Log in HashMap (Username and Password)
-//    val logInInfo = HashMap<String, String>()
-//    logInInfo["Cashier"] = "0000"
-//    logInInfo["Guest"] = "0000"
-//
-//
-////    Log in process
-//
-//    logger.info { "Please Enter your Username" }
-//    var userName = readln()
-//    logger.info { "Please enter password:" }
-//    var password = readln()
-//    while (userName !in logInInfo){
-//        while (userName !in logInInfo || password != logInInfo.getValue(userName)){
-//            logger.info { "Not correct username and password" }
-//            logger.info { "Enter Username" }
-//            userName = readln()
-//            logger.info { "Enter password" }
-//            password = readln()
-//            if (userName !in logInInfo || password != logInInfo.getValue(userName)){
-//                logger.info { "Incorrect password for $userName" }
-//                logger.info { "Enter password" }
-//                password = readln()
-//            }
-//        }
-//
-//    }
-////    welcome the user
-//    logger.info { "Welcome $userName!" }
+//Log in HashMap (Username and Password)
+    val logInInfo = HashMap<String, String>()
+    logInInfo["Cashier"] = "0000"
+    logInInfo["Guest"] = "0000"
+
+
+//    Log in process
+
+    logger.info { "Please Enter your Username" }
+    var userName = readln()
+    logger.info { "Please enter password:" }
+    var password = readln()
+    while (userName !in logInInfo){
+        while (userName !in logInInfo || password != logInInfo.getValue(userName)){
+            logger.info { "Not correct username and password" }
+            logger.info { "Enter Username" }
+            userName = readln()
+            logger.info { "Enter password" }
+            password = readln()
+            if (userName !in logInInfo || password != logInInfo.getValue(userName)){
+                logger.info { "Incorrect password for $userName" }
+                logger.info { "Enter password" }
+                password = readln()
+            }
+        }
+
+    }
+//    welcome the user
+    logger.info { "Welcome $userName!" }
 
 //Grocery Price HashMap
 
@@ -68,25 +68,46 @@ fun main() {
     prices["Ricoa Rich Chocolate 1KG"] = 499.95
     prices["Ovaltine Ready Mixed Malt Chocolate 260G"] = 75.75
 
-    var totalPrice = prices.values.sum()
+
 
 //    HashMap Cart
     val groceryCart = HashMap<String, Double>()
     val groceryCartAdd = HashMap<String, Int>()
 
+
     var input = ""
     var inputAddToCart = ""
-    var inputAmountAddToCart = 0
+//    var inputAmountAddToCart = 0
     while (input != "n") {
         logger.info { "Add to Cart Item" }
          inputAddToCart = readln()
         logger.info { "Add Amount to Item" }
-         inputAmountAddToCart = readln().toInt()
+        val inputAmountAddToCart = readln().toInt()
+
+
+
 
         if (inputAddToCart in prices){
-            groceryCartAdd[inputAddToCart] = inputAmountAddToCart
+
+
+
+            if (inputAddToCart in groceryCartAdd){
+                if (groceryCartAdd.containsKey(inputAddToCart)){
+                    val newAmount = groceryCartAdd.getValue(inputAddToCart) + inputAmountAddToCart
+                    groceryCartAdd[inputAddToCart] = newAmount
+                    logger.info { "$inputAddToCart already in add to cart list" }
+
+                }
+            } else {
+                groceryCartAdd[inputAddToCart] = inputAmountAddToCart
+            }
+
+
+
+
             groceryCart[inputAddToCart] = prices.getValue(inputAddToCart) * groceryCartAdd.getValue(inputAddToCart)
             logger.info { "$inputAddToCart Price:${prices.getValue(inputAddToCart)} Amount:${groceryCartAdd.getValue(inputAddToCart)} Total: ${prices.getValue(inputAddToCart) * groceryCartAdd.getValue(inputAddToCart)}" }
+
         }else{
             logger.info { "item not in prices" }
         }
@@ -97,30 +118,13 @@ fun main() {
             input = readln()
         }
 
-//        if (inputAddToCart in prices) {
-//
-//            if (books[inputAddToCart] == "Available") {
-//                borrowBooks[inputAddToCart] = "Borrowing"
-//                logger.info { "$inputAddToCart is added in your borrowed books." }
-//            } else {
-//                logger.info { "$inputAddToCart is not available for borrowing." }
-//            }
-//
-//        } else {
-//            logger.info { "$inputAddToCart is not in the book list." }
-//        }
-//
-//        logger.info { "Hello $userName! Would you like to borrow a book? Y/N" }
-//        input = readln()
-//        while (input != "y" && input != "n") {
-//            logger.info { "please enter y or n" }
-//            input = readln()
-//        }
 
 
     }
     for(entry in groceryCart){
-        logger.info { groceryCart.entries }
-        logger.info { "${entry.key},Price:${prices.getValue(inputAddToCart)} Amount: ${groceryCartAdd.getValue(inputAddToCart)} Total: ${entry.value}" }
+//        logger.info { groceryCart.entries }
+        logger.info { "${entry.key}, Amount: ${groceryCartAdd.getValue(inputAddToCart)} Total: ${entry.value}" }
     }
+    val totalPrice = groceryCart.values.sum()
+    logger.info { "Total: $totalPrice" }
 }
