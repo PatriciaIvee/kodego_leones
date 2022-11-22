@@ -68,8 +68,6 @@ fun main() {
     prices["Ricoa Rich Chocolate 1KG"] = 499.95
     prices["Ovaltine Ready Mixed Malt Chocolate 260G"] = 75.75
 
-
-
 //    HashMap Cart
     val groceryCart = HashMap<String, Double>()
     val groceryCartAdd = HashMap<String, Int>()
@@ -77,19 +75,14 @@ fun main() {
 
     var input = ""
     var inputAddToCart = ""
-//    var inputAmountAddToCart = 0
+
     while (input != "n") {
         logger.info { "Add to Cart Item" }
          inputAddToCart = readln()
         logger.info { "Add Amount to Item" }
         val inputAmountAddToCart = readln().toInt()
 
-
-
-
         if (inputAddToCart in prices){
-
-
 
             if (inputAddToCart in groceryCartAdd){
                 if (groceryCartAdd.containsKey(inputAddToCart)){
@@ -101,9 +94,6 @@ fun main() {
             } else {
                 groceryCartAdd[inputAddToCart] = inputAmountAddToCart
             }
-
-
-
 
             groceryCart[inputAddToCart] = prices.getValue(inputAddToCart) * groceryCartAdd.getValue(inputAddToCart)
             logger.info { "$inputAddToCart Price:${prices.getValue(inputAddToCart)} Amount:${groceryCartAdd.getValue(inputAddToCart)} Total: ${prices.getValue(inputAddToCart) * groceryCartAdd.getValue(inputAddToCart)}" }
@@ -118,9 +108,8 @@ fun main() {
             input = readln()
         }
 
-
-
     }
+
     for(entry in groceryCart){
 //        logger.info { groceryCart.entries }
         logger.info { "${entry.key}, Amount: ${groceryCartAdd.getValue(inputAddToCart)} Total: ${entry.value}" }
