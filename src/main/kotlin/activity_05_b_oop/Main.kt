@@ -52,12 +52,15 @@ class Magazine: Publication(){
 class Newspaper: Publication(){
     var headline: String = ""
     var articles: ArrayList<Article> = ArrayList()
-    class Illustrator(firstName: String, lastName: String) :Person(firstName,lastName) {
-    }
+    class Illustrator(firstName: String, lastName: String) :Person(firstName,lastName)
 
 
 }
 
 class Comics: Publication(){
+
+}
+
+enum class AudioVideoMaterial{
 
 }
