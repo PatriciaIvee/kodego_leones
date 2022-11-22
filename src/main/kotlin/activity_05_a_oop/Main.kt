@@ -1,7 +1,6 @@
 package activity_05_a_oop
 
 
-import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Date
 
@@ -99,6 +98,9 @@ fun main() {
     var population: ArrayList<Person> = ArrayList()
 
     var person: Person = Student("Janreign","Aragon")
+    population.add(person)
+
+    person= Student("Jani","Arcena")
     population.add(person)
 
     person = CertificateStudent("Manny", "Pacquiao")
