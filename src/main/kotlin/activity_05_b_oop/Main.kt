@@ -45,8 +45,7 @@ class Illustrator(firstName: String, lastName: String):Person(firstName,lastName
 
 class Publisher(var publisherName: String,
                 var publisherAddress: String,
-                var publishedDate: Date)
-
+                var DateEstablished: Date)
 class Article (var title: String)
 
 class Magazine: Publication() {
