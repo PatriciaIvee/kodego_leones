@@ -34,14 +34,14 @@ class PersonalCare(productName: String,productPrice: Double): Product(productNam
 
 class Cart(cart:HashMap<String,Double>){}
 
-fun addToCart(){
+fun addToCart(cart: HashMap<String, Double>,productName: String,productPrice: Double){
 
 }
 
-fun removeToCart(){
+fun removeToCart(cart: HashMap<String, Double>,productName: String,productPrice: Double){
 
 }
 
-fun checkOutCart(){
+fun checkOutCart(cart: HashMap<String, Double>,productName: String,productPrice: Double){
 
 }
