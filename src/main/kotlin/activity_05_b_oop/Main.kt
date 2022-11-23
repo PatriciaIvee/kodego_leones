@@ -1,6 +1,5 @@
 package activity_05_b_oop
 
-import activity_04_b.Article
 import java.util.Date
 
 /**
@@ -24,7 +23,6 @@ open class Person(var firstName: String, var lastName: String) {
 
 }
 
-
 open class Publication{
     var title: String = ""
     var datePublished: Date = Date()
@@ -35,32 +33,53 @@ open class Publication{
 
 class Book:Publication(){
 
-    var authors: ArrayList<Authors> = ArrayList()
+    var authors: ArrayList<Author> = ArrayList()
     var illustrators:ArrayList<Illustrator> = ArrayList()
     var chapters:ArrayList<String> = ArrayList()
     var pages: Int = 0
+    var publisher: ArrayList<Publisher> = ArrayList()
 
-    class Authors(firstName: String,lastName: String): Person(firstName, lastName)
-    class Illustrator(firstName: String, lastName: String):Person(firstName,lastName)
 }
-class Magazine: Publication(){
-    var articles: ArrayList<Article> = ArrayList()
+class Author(firstName: String, lastName: String): Person(firstName, lastName)
+class Illustrator(firstName: String, lastName: String):Person(firstName,lastName)
 
-    class Illustrator(firstName: String, lastName: String):Person(firstName,lastName) {
-    }
+class Publisher(var publisherName: String,
+                var publisherAddress: String,
+                var publishedDate: Date)
+
+class Article (var title: String)
+
+class Magazine: Publication() {
+    var articles: ArrayList<Article> = ArrayList()
+    var authors:ArrayList<Author> = ArrayList()
+    var illustrators: ArrayList<Illustrator> = ArrayList()
+    var editors: ArrayList<Editor> = ArrayList()
+
+    class Editor(firstName: String,lastName: String):Person(firstName,lastName)
 }
 class Newspaper: Publication(){
     var headline: String = ""
     var articles: ArrayList<Article> = ArrayList()
-    class Illustrator(firstName: String, lastName: String) :Person(firstName,lastName)
-
+    var authors:ArrayList<Author> = ArrayList()
+    var illustrators: ArrayList<Illustrator> = ArrayList()
 
 }
 
 class Comics: Publication(){
+    var illustrators: ArrayList<Illustrator> = ArrayList()
+    var publisher: ArrayList<Publisher> = ArrayList()
 
 }
 
 enum class AudioVideoMaterial{
-
+    RECORDING,
+    MOVIE,
+    PRESENTATION,
+    DOCUMENTARY,
+    EQUIPMENT,
+    UNSPECIFIED
 }
+
+fun search(){}
+fun add(){}
+fun remove(){}
