@@ -12,8 +12,12 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.microutils:kotlin-logging-jvm:3.0.0") //For Logging
-    implementation("ch.qos.logback:logback-classic:1.4.4") //For Logging
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.4") //For Logging
+    implementation("ch.qos.logback:logback-classic:1.4.5") //For Logging
+
+    implementation("org.jetbrains.kotlinx:multik-core:0.2.1") // testing
+    implementation("org.jetbrains.kotlinx:multik-default:0.2.1") //testing
+
     testImplementation(kotlin("test"))
 }
 
