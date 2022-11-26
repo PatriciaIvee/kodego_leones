@@ -39,12 +39,10 @@ fun main() {
         println("Student:${student.fullName()}")
     }
 
-    wildSearch("patr",studentNames)
+    wildSearch("pa",studentNames)
 
 
 }
-
-
 
 class Student {
     var firstName: String = ""
@@ -60,15 +58,21 @@ class Student {
 
 }
 fun wildSearch(name: String, studentArray: ArrayList<Student>) {
+
     val searchResults: ArrayList<String> = ArrayList()
 
-    for (student in studentArray){
-        if(name.length >= 3 && student.firstName.contains(name,ignoreCase = true) ||
-            student.lastName.contains(name,ignoreCase = true)){
-            searchResults.add(student.fullName())
+    if (name.length < 3){
+        logger.info { "String length should be 3 or more" }
+    }else{
+        for (student in studentArray){
+            if(student.firstName.contains(name,ignoreCase = true) ||
+                student.lastName.contains(name,ignoreCase = true)){
+                searchResults.add(student.fullName())
 
+            }
         }
     }
+
     println("Search Results:")
     for(student in searchResults){
        println(student)
