@@ -27,7 +27,7 @@ private val logger = KotlinLogging.logger {}
  */
 fun main() {
     val studentNames: ArrayList<Student> = ArrayList()
-
+    addNameToList(Student("Maria Patricia Jesus", "Ontario"),studentNames)
     studentNames.add(Student("Patricia Ivee","Leones"))
     studentNames.add(Student("Jejomar","Binay"))
     studentNames.add(Student("Manny","Pacquiao"))
@@ -39,7 +39,7 @@ fun main() {
         println("Student:${student.fullName()}")
     }
 
-    wildSearch("pa",studentNames)
+    wildSearch("pat",studentNames)
 
 
 }
@@ -78,4 +78,9 @@ fun wildSearch(name: String, studentArray: ArrayList<Student>) {
        println(student)
     }
 
+}
+
+fun addNameToList(name: Student, studentArray: ArrayList<Student>){
+    var student = name
+    studentArray.add(student)
 }
