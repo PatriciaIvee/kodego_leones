@@ -1,10 +1,15 @@
 package activity_05_a_oop
 
 
+import mu.KotlinLogging
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.Month
+import java.time.Year
 import java.time.format.DateTimeFormatter
 import java.util.Date
 
-
+private val logger = KotlinLogging.logger {  }
 /**
  * Scope : Use inheritance on Students
  * Create a person class with firstname, middlename, lastname, address and birthday.
@@ -14,6 +19,8 @@ import java.util.Date
  *
  * Create a CertificateStudent, UnderGraduateStudent, MasterStudent, and GraduateStudent.
  * A student has different statuses
+ *
+ *
  * Status : Leave of Absence, Ongoing, Graduated, Will Begin, Unknown, Shifted,
  * The Certificate Student has a list of short courses he or she has gotten.
  *
@@ -34,79 +41,39 @@ import java.util.Date
  */
 
 
-
-open class Person{
-    var firstName: String = ""
-    var middleName: String = ""
-    var lastName: String = ""
-    var address: String = ""
-
-
-    open var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("MM-dd-yyyy")
-    var birthDate = Date()
-
-    fun fullName() = "$lastName, $firstName $middleName"
-
-    constructor(firstName: String, lastName: String){
-        this.firstName = firstName
-        this.lastName = lastName
-    }
-}
-
-class Student(firstName: String,lastName: String): Person(firstName, lastName){
-    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
-    var yearEnrolled = Date()
-    var studentID: String = ""
-
-}
-
-class CertificateStudent(firstName: String,lastName: String): Person(firstName, lastName) {
-    var shortCoursesList: List<String> = listOf()
-}
-class UnderGraduateStudent(firstName: String,lastName: String): Person(firstName, lastName){
-    var collegeList: List<String> = listOf()
-    var degreesTakenOrTakingList: List<String> =  listOf()
-    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
-    var yearEnrolled = Date()
-    var yearEnd = Date()
-}
-
-class MasterStudent(firstName: String,lastName: String): Person(firstName, lastName) {
-    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
-    var yearEnrolled = Date()
-    var yearEnd = Date()
-    var degree: String = ""
-}
-class GraduateStudent(firstName: String,lastName: String): Person(firstName, lastName) {
-    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
-    var yearEnrolled = Date()
-    var yearEnd = Date()
-    var degree: String = ""
-
-}
-
-enum class Status {
-    LEAVE_OF_ABSENCE,
-    ONGOING,
-    GRADUATED,
-    WILL_BEGIN,
-    SHIFTED,
-    UNKNOWN
-}
-
 fun main() {
-    var population: ArrayList<Person> = ArrayList()
+    val population: ArrayList<Person> = ArrayList()
 
     var person: Person = Student("Janreign","Aragon")
+    person.birthDate = Date(1999,12,1)
     population.add(person)
 
     person= Student("Jani","Arcena")
     population.add(person)
 
+//    Student 1
     person = CertificateStudent("Manny", "Pacquiao")
+    var certStudent:CertificateStudent = person
+    certStudent.shortCoursesList.add("Computer Technician")
+    certStudent.shortCoursesList.add("Network Technician")
+    certStudent.shortCoursesList.add("Electrical Technician")
+    population.add(person)
+
+//    Student 2
+    person = CertificateStudent("Arturo", "Buenavista")
+    certStudent = person
+    certStudent.shortCoursesList.add("Public Speaking")
+    certStudent.shortCoursesList.add("Debate")
+    certStudent.shortCoursesList.add("Advertising Article")
     population.add(person)
 
     person = UnderGraduateStudent("Pat","Leones")
+    var undergrad:UnderGraduateStudent = person
+    undergrad.collegeSchoolOf.add("College of Engineering")
+    undergrad.degreesTakenOrTakingList.add("Bachelor of Interior Design")
+    undergrad.yearEnrolled = 2020
+    undergrad.yearEnd = 2022
+
     population.add(person)
 
     person = MasterStudent("Mac","Valmores")
@@ -122,21 +89,34 @@ fun main() {
         when (individual) {
             is Student -> {
                 println("Student:${individual.fullName()}")
-                var student = individual as Student
+                println("Birthday: ${person.birthDate}")
+                val student = individual as Student
                 student.studentID = ""
-                student.yearEnrolled = Date(2022)
-                Status.ONGOING
-
+                student.yearEnrolled = Date()
             }
 
             is CertificateStudent -> {
                 println("Certificate Student:${individual.fullName()}")
-                var certificateStudent = individual as CertificateStudent
-                certificateStudent.shortCoursesList = listOf()
+                val certificateStudent = individual as CertificateStudent
+                logger.info{"Certificates taken"}
+                for (cert in certificateStudent.shortCoursesList) {
+                    println(cert)
+                }
             }
 
             is UnderGraduateStudent -> {
                 println("Undergraduate Student:${individual.fullName()}")
+                val underGraduateStudent = individual as UnderGraduateStudent
+                logger.info { "School:" }
+                for (department in underGraduateStudent.collegeSchoolOf){
+                    println(department)
+                }
+                logger.info { "Degree:" }
+                for (degree in underGraduateStudent.degreesTakenOrTakingList){
+                    println(degree)
+                }
+                println("Year enrolled:${ underGraduateStudent.yearEnrolled }")
+                println("Year end:${underGraduateStudent.yearEnd}")
             }
 
             is MasterStudent -> {
@@ -152,4 +132,67 @@ fun main() {
 
         }
     }
+}
+
+
+open class Person{
+    var firstName: String = ""
+    var middleName: String = ""
+    var lastName: String = ""
+    var address: String = ""
+
+
+    open var formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("MM-dd-yyyy")
+//    var date = LocalDate.parse("0000-00-00")
+    var birthDate = Date(0,0,0)
+
+
+    fun fullName() = "$lastName, $firstName $middleName"
+
+    constructor(firstName: String, lastName: String){
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+}
+
+class Student(firstName: String,lastName: String): Person(firstName, lastName){
+//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
+
+    var yearEnrolled = Date()
+    var studentID: String = ""
+
+}
+
+class CertificateStudent(firstName: String,lastName: String): Person(firstName, lastName) {
+    var shortCoursesList: ArrayList<String> = ArrayList()
+}
+class UnderGraduateStudent(firstName: String,lastName: String): Person(firstName, lastName){
+    var collegeSchoolOf: ArrayList<String> = ArrayList()
+    var degreesTakenOrTakingList: ArrayList<String> =  ArrayList()
+//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
+    var yearEnrolled : Int = 0
+    var yearEnd : Int = 0
+}
+
+class MasterStudent(firstName: String,lastName: String): Person(firstName, lastName) {
+//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
+    var yearEnrolled: Int = 0
+    var yearEnd : Int = 0
+    var degree: String = ""
+}
+class GraduateStudent(firstName: String,lastName: String): Person(firstName, lastName) {
+//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
+    var yearEnrolled : Int = 0
+    var yearEnd : Int = 0
+    var degree: String = ""
+
+}
+
+enum class Status {
+    LEAVE_OF_ABSENCE,
+    ONGOING,
+    GRADUATED,
+    WILL_BEGIN,
+    SHIFTED,
+    UNKNOWN
 }
