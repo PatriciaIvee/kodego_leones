@@ -44,7 +44,7 @@ fun main() {
     var person: Person = Student("Janreign","Aragon")
 
     var student1:Student = person as Student
-//    student1.status = Status.ONGOING
+    //    student1.status = Status.ONGOING
     population.add(person)
 
     person = Student("Jani","Arcena")
@@ -176,6 +176,10 @@ class Student(firstName: String,lastName: String): Person(firstName, lastName){
     var yearEnrolled = Date()
     var studentID: String = ""
     var status: Status = Status.UNKNOWN
+
+    fun updateStatus(status: Status){
+        this.status = status
+    }
 
 }
 
