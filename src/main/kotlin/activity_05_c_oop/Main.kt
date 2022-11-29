@@ -32,10 +32,16 @@ open class Product(var productName: String,
                    var productPrice: Double)
 
 class Poultry(productName: String,productPrice: Double): Product(productName, productPrice){
-    val weight: Float = 0.0F
+    var weight: Float = 0.0F
+    fun newPrice(){
+        productPrice * weight
+    }
 }
 class Fish(productName: String,productPrice: Double): Product(productName, productPrice){
-    val weight: Float = 0.0F
+    var weight: Float = 0.0F
+    fun newPrice(){
+        productPrice * weight
+    }
 }
 class CannedGoods(productName: String,productPrice: Double): Product(productName, productPrice){
     var weight: Float = 0.0F
@@ -54,12 +60,21 @@ class Snacks(productName: String,productPrice: Double): Product(productName, pro
 }
 class FrozenGoods(productName: String,productPrice: Double): Product(productName, productPrice){
     var weight: Float = 0.0F
+    fun newPrice(){
+        productPrice * weight
+    }
 }
 class Fruits(productName: String,productPrice: Double): Product(productName, productPrice){
     var weight: Float = 0.0F
+    fun newPrice(){
+        productPrice * weight
+    }
 }
 class Vegetables(productName: String,productPrice: Double): Product(productName, productPrice){
     var weight: Float = 0.0F
+    fun newPrice(){
+        productPrice * weight
+    }
 }
 
 class Condiments(productName: String,productPrice: Double): Product(productName, productPrice){
