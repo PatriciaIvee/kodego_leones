@@ -43,16 +43,17 @@ fun main() {
 
     var person: Person = Student("Janreign","Aragon")
 
-    var pupil:Student = person as Student
-    pupil.status = Status.ONGOING
+    var student1:Student = person as Student
+//    student1.status = Status.ONGOING
     population.add(person)
 
     person = Student("Jani","Arcena")
-    pupil.status = Status.SHIFTED
+//    student1.status = Status.SHIFTED
     population.add(person)
 
     person = Student("Jose", "Santos")
-    pupil.status = Status.WILL_BEGIN
+//    student1.status = Status.WILL_BEGIN
+//    Status will_begin now becomes  Janreign's status,  jani and Jose's status becomes unknown
     population.add(person)
 
 
