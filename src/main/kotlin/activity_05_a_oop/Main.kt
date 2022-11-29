@@ -42,9 +42,17 @@ fun main() {
     val population: ArrayList<Person> = ArrayList()
 
     var person: Person = Student("Janreign","Aragon")
+
+    var pupil:Student = person as Student
+    pupil.status = Status.ONGOING
     population.add(person)
 
-    person= Student("Jani","Arcena")
+    person = Student("Jani","Arcena")
+    pupil.status = Status.SHIFTED
+    population.add(person)
+
+    person = Student("Jose", "Santos")
+    pupil.status = Status.WILL_BEGIN
     population.add(person)
 
 
@@ -127,7 +135,7 @@ fun main() {
                 }
                 println("Year enrolled:${ underGraduateStudent.yearEnrolled }")
                 println("Year end:${underGraduateStudent.yearEnd}")
-                println("Status :${undergrad.status}")
+                println("Status :${underGraduateStudent.status}")
             }
 
             is MasterStudent -> {
