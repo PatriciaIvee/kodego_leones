@@ -2,11 +2,7 @@ package activity_05_a_oop
 
 
 import mu.KotlinLogging
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.Month
-import java.time.Year
-import java.time.format.DateTimeFormatter
+
 import java.util.Date
 
 private val logger = KotlinLogging.logger {  }
@@ -42,14 +38,15 @@ private val logger = KotlinLogging.logger {  }
 
 
 fun main() {
+
     val population: ArrayList<Person> = ArrayList()
 
     var person: Person = Student("Janreign","Aragon")
-    person.birthDate = Date(1999,12,1)
     population.add(person)
 
     person= Student("Jani","Arcena")
     population.add(person)
+
 
 //    Student 1
     person = CertificateStudent("Manny", "Pacquiao")
@@ -73,6 +70,16 @@ fun main() {
     undergrad.degreesTakenOrTakingList.add("Bachelor of Interior Design")
     undergrad.yearEnrolled = 2020
     undergrad.yearEnd = 2022
+    undergrad.status = Status.GRADUATED
+//    why it prints ongoing for both entries?
+
+    population.add(person)
+
+    person = UnderGraduateStudent("Hannah","Montana")
+    undergrad = person
+    undergrad.collegeSchoolOf.add("College of Music and Performing Arts")
+    undergrad.degreesTakenOrTakingList.add("Bachelor of Performing Arts")
+    undergrad.status = Status.ONGOING
 
     population.add(person)
 
@@ -82,6 +89,10 @@ fun main() {
     person = GraduateStudent("Juan Ponce", "Enrile")
     population.add(person)
 
+
+
+
+
     for(individual in population) {
         println("Class:${individual.javaClass.toString()}")
 
@@ -89,10 +100,8 @@ fun main() {
         when (individual) {
             is Student -> {
                 println("Student:${individual.fullName()}")
-                println("Birthday: ${person.birthDate}")
                 val student = individual as Student
-                student.studentID = ""
-                student.yearEnrolled = Date()
+                println("Status :${student.status}")
             }
 
             is CertificateStudent -> {
@@ -102,6 +111,7 @@ fun main() {
                 for (cert in certificateStudent.shortCoursesList) {
                     println(cert)
                 }
+
             }
 
             is UnderGraduateStudent -> {
@@ -117,6 +127,7 @@ fun main() {
                 }
                 println("Year enrolled:${ underGraduateStudent.yearEnrolled }")
                 println("Year end:${underGraduateStudent.yearEnd}")
+                println("Status :${undergrad.status}")
             }
 
             is MasterStudent -> {
@@ -141,10 +152,7 @@ open class Person{
     var lastName: String = ""
     var address: String = ""
 
-
-    open var formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("MM-dd-yyyy")
-//    var date = LocalDate.parse("0000-00-00")
-    var birthDate = Date(0,0,0)
+    var birthDate = Date()
 
 
     fun fullName() = "$lastName, $firstName $middleName"
@@ -156,10 +164,9 @@ open class Person{
 }
 
 class Student(firstName: String,lastName: String): Person(firstName, lastName){
-//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
-
     var yearEnrolled = Date()
     var studentID: String = ""
+    var status: Status = Status.UNKNOWN
 
 }
 
@@ -169,26 +176,26 @@ class CertificateStudent(firstName: String,lastName: String): Person(firstName, 
 class UnderGraduateStudent(firstName: String,lastName: String): Person(firstName, lastName){
     var collegeSchoolOf: ArrayList<String> = ArrayList()
     var degreesTakenOrTakingList: ArrayList<String> =  ArrayList()
-//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
     var yearEnrolled : Int = 0
     var yearEnd : Int = 0
+    var status:Status = Status.UNKNOWN
 }
 
 class MasterStudent(firstName: String,lastName: String): Person(firstName, lastName) {
-//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
     var yearEnrolled: Int = 0
     var yearEnd : Int = 0
     var degree: String = ""
+    var status: Status = Status.UNKNOWN
 }
 class GraduateStudent(firstName: String,lastName: String): Person(firstName, lastName) {
-//    override var formatter: DateTimeFormatter? = DateTimeFormatter.ofPattern("yyyy")
     var yearEnrolled : Int = 0
     var yearEnd : Int = 0
     var degree: String = ""
+    var status: Status = Status.UNKNOWN
 
 }
 
-enum class Status {
+enum class Status  {
     LEAVE_OF_ABSENCE,
     ONGOING,
     GRADUATED,
