@@ -2,6 +2,7 @@ package activity_05_b_oop
 
 import java.util.Date
 
+
 /**
  * 1. A book, a magazine, a newspaper and comics inherits from a Publication class.
  * Identify the attributes and the methods for the publication.
@@ -14,6 +15,8 @@ import java.util.Date
  * What will you use to present the two a class or an enum or will you keep them as is? Why?
  * Implement your answer in code.
  */
+
+
 
 open class Person(var firstName: String, var lastName: String) {
     var middleName:String = ""
@@ -80,5 +83,5 @@ enum class AudioVideoMaterial{
 }
 
 fun search(){}
-fun add(){}
+fun addMaterial(){}
 fun remove(){}
