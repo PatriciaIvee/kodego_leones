@@ -176,6 +176,7 @@ class Student(firstName: String,lastName: String): Person(firstName, lastName){
     var yearEnrolled = Date()
     var studentID: String = ""
     var status: Status = Status.UNKNOWN
+    var grade: Float = 0.0F
 
     fun updateStatus(status: Status){
         this.status = status
@@ -191,6 +192,7 @@ class UnderGraduateStudent(firstName: String,lastName: String): Person(firstName
     var degreesTakenOrTakingList: ArrayList<String> =  ArrayList()
     var yearEnrolled : Int = 0
     var yearEnd : Int = 0
+    var grade: Float = 0.0F
     var status:Status = Status.UNKNOWN
 }
 
@@ -198,12 +200,14 @@ class MasterStudent(firstName: String,lastName: String): Person(firstName, lastN
     var yearEnrolled: Int = 0
     var yearEnd : Int = 0
     var degree: String = ""
+    var grade: Float = 0.0F
     var status: Status = Status.UNKNOWN
 }
 class GraduateStudent(firstName: String,lastName: String): Person(firstName, lastName) {
     var yearEnrolled : Int = 0
     var yearEnd : Int = 0
     var degree: String = ""
+    var grade: Float = 0.0F
     var status: Status = Status.UNKNOWN
 
 }
