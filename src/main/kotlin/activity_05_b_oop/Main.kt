@@ -27,14 +27,18 @@ open class Person(var firstName: String, var lastName: String) {
 }
 
 open class Publication{
-    var title: String = ""
-    var datePublished: Date = Date()
-    var edition:String = ""
+    open var title: String = ""
+    open var datePublished: Date = Date()
+    open var edition:String = ""
     var ISBN: String = ""
+
+    constructor(title: String){
+        this.title = title
+    }
 
 }
 
-class Book:Publication(){
+class Book(title: String):Publication(title){
 
     var authors: ArrayList<Author> = ArrayList()
     var illustrators:ArrayList<Illustrator> = ArrayList()
@@ -51,7 +55,7 @@ class Publisher(var publisherName: String,
                 var DateEstablished: Date)
 class Article (var title: String)
 
-class Magazine: Publication() {
+class Magazine(title: String):Publication(title) {
     var articles: ArrayList<Article> = ArrayList()
     var authors:ArrayList<Author> = ArrayList()
     var illustrators: ArrayList<Illustrator> = ArrayList()
@@ -59,21 +63,22 @@ class Magazine: Publication() {
 
     class Editor(firstName: String,lastName: String):Person(firstName,lastName)
 }
-class Newspaper: Publication(){
-    var headline: String = ""
+class Newspaper(headline: String):Publication(headline){
     var articles: ArrayList<Article> = ArrayList()
     var authors:ArrayList<Author> = ArrayList()
     var illustrators: ArrayList<Illustrator> = ArrayList()
 
 }
 
-class Comics: Publication(){
+class Comics(title: String):Publication(title){
     var illustrators: ArrayList<Illustrator> = ArrayList()
     var publisher: ArrayList<Publisher> = ArrayList()
 
 }
-
-enum class AudioVideoMaterial{
+class AudioVideoMaterial(title: String):Publication(title){
+    var category = AudioVideoMaterialCategory.UNSPECIFIED
+}
+enum class AudioVideoMaterialCategory{
     RECORDING,
     MOVIE,
     PRESENTATION,
