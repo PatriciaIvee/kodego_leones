@@ -1,6 +1,8 @@
 package activity_06_b
 
 import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 /**
  * Covered Topic(s) : OOP
@@ -31,6 +33,47 @@ import java.util.*
  */
 
 fun main() {
+    val libraryHashMap:HashMap<Person,Publication> = HashMap()
+
+    var person = Person("Pat","Leones")
+    var publication = Publication("Harry Potter and the Sorcerer's Stone")
+
+    acceptItem(person,publication,libraryHashMap)
+
+    person = Person("Jojo","Consuelo")
+    publication = Publication("Somewhere Over The Rainbow")
+    acceptItem(person,publication,libraryHashMap)
+
+
+    person = Person("Jojo","Consuelo")
+    publication = Publication("HomoSapiens")
+
+    acceptItem(person,publication,libraryHashMap)
+
+    person = Person("Jojo","Consuelo")
+    publication = Publication("In Another Life")
+
+    acceptItem(person,publication,libraryHashMap)
+
+    person = Person("Jojo","Consuelo")
+    publication = Publication("Life of Pi")
+
+    acceptItem(person,publication,libraryHashMap)
+
+    person = Person("Jojo","Consuelo")
+    publication = Publication("1984")
+
+    acceptItem(person,publication,libraryHashMap)
+
+    person = Person("Jojo","Consuelo")
+    publication = Publication("Day After Tomorrow")
+
+    acceptItem(person,publication,libraryHashMap)
+
+    libraryHashMap.forEach { (Person, Publication) -> println("Borrower: ${Person.firstName}, ${Person.lastName} ${Person.status}")
+    println("Publication:${Publication.title}, ${Publication.status}")
+    }
+
 
 }
 
@@ -57,11 +100,15 @@ open class Person(var firstName: String, var lastName: String) {
 //ABOUT THE PUBLICATION
 
 open class Publication{
-    open var title: String = ""
-    open var datePublished: Date = Date()
-    open var edition:String = ""
+    var title: String = ""
+    var datePublished: Date = Date()
+    var edition:String = ""
     var ISBN: String = ""
+    var status: PublicationStatus = PublicationStatus.PENDING
 
+    fun changeStatus(status: PublicationStatus){
+        this.status = status
+    }
     constructor(title: String){
         this.title = title
     }
@@ -99,7 +146,6 @@ class Newspaper(headline: String):Publication(headline){
     var illustrators: ArrayList<Illustrator> = ArrayList()
 
 }
-
 class Comics(title: String):Publication(title){
     var illustrators: ArrayList<Illustrator> = ArrayList()
     var publisher: ArrayList<Publisher> = ArrayList()
@@ -118,21 +164,62 @@ enum class AudioVideoMaterialCategory{
 }
 
 
-enum class BookStatus{
+enum class PublicationStatus{
     RESERVED,
     FOR_INTERNAL_USE_ONLY,
     FIXING,
-    AVAILABLE
+    AVAILABLE,
+    PENDING
 }
 
-//FUNCTION TO ADD THE ITEMS FOR BORROWING
-fun acceptItem(publication: Publication, person: Person){
+
+//FUNCTION TO ADD ITEMS
+fun acceptItem(person: Person,publication: Publication,hashMap: HashMap<Person,Publication>){
+    hashMap.put(person,publication)
+
+//    BORROWER EXCEPTION PAST DUE
+
+    if (person.status == Person.BookBorrowerStatus.PAST_DUE){
+        throw BorrowingPublicationException.BorrowerRestriction.UnpaidDues()
+    }
+
+//    BORROWER REACHED LIMIT
+// new hashmap to contain person names value (count)
+    var countPerson:HashMap<Person,Int> = HashMap()
+    if (person in hashMap){
+        var count = hashMap.count()
+        countPerson.put(person,count)
+
+    }
+    if (countPerson.containsKey(person)){
+        var compare = countPerson.getValue(person)
+        if (compare >= 6){
+            throw BorrowingPublicationException.BorrowerRestriction.BorrowLimitReached()
+        }
+    }
+//    until here
+// PUBLICATION RESERVED
+    if (publication.status == PublicationStatus.RESERVED){
+        throw BorrowingPublicationException.LibraryRestrictionException.BookIsReserved()
+    }
+// PUBLICATION IS BEING FIXED
+    if (publication.status == PublicationStatus.FIXING){
+        throw  BorrowingPublicationException.LibraryRestrictionException.BookIsBeingFixed()
+    }
+//    PUBLICATION IS FOR INTERNAL USE ONLY
+    if (publication.status == PublicationStatus.FOR_INTERNAL_USE_ONLY){
+        throw BorrowingPublicationException.LibraryRestrictionException.BookIsForInternalUseOnly()
+    }
+}
+
+//FUNCTION TO CHECK ACCEPTED ITEMS
+fun checkItems(acceptedItems: HashMap<Person,Publication>){
 
 }
 
 //FUNCTION TO REMOVE ITEMS FOR BORROWING
-fun removeItem(publication: Publication,person: Person){
-
+fun removeItem(person: Person,publication: Publication,hashMap: HashMap<Person,Publication>){
+    hashMap.remove(person,publication)
 }
 
 
@@ -145,7 +232,7 @@ sealed class BorrowingPublicationException(message:String):Exception(message){
         class UnpaidDues(message: String = "Borrower has unpaid dues") : BorrowerRestriction(message)
     }
 
-    sealed class LibraryRestrictionException(message: String):BorrowingPublicationException(message) {
+    sealed class LibraryRestrictionException(message: String) : BorrowingPublicationException(message) {
         class BookIsForInternalUseOnly(message: String = "Book is Exclusively used inside Library") :
             LibraryRestrictionException(message)
 
