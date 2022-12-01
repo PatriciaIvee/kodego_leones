@@ -217,7 +217,6 @@ class Cart {
             }
         }
 
-
     }
 
 //CHECK OUT FUNCTION
@@ -241,7 +240,7 @@ class Cart {
             logger.info { "Change: $change" }
         }
 
-        if (payment > 0.0){
+        if (payment < 0.0){
             throw GroceryException.CartInputException.NegativeInput()
         }
     }
