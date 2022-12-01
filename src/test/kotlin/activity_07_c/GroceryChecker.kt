@@ -32,11 +32,5 @@ internal class SampleTestGrocery{
         }
 
     }
-//    @Test
-//    fun checkBuyerPaymentNotEnough(){
-//        assertThrows<GroceryException.BuyerException.PaymentNotEnough> {
-//            groceryChecker.checkPayment(800.00,900.00)
-//        }
-//    }
 
 }
