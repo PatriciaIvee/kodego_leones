@@ -36,39 +36,90 @@ fun main() {
     val libraryHashMap:HashMap<Person,Publication> = HashMap()
 
     var person = Person("Pat","Leones")
+    person.status = Person.BookBorrowerStatus.PAST_DUE
     var publication = Publication("Harry Potter and the Sorcerer's Stone")
 
-    acceptItem(person,publication,libraryHashMap)
+    try {
+        acceptItem(person,publication,libraryHashMap)
 
+    }catch (e:Exception){
+        e.printStackTrace()
+    }
+
+//1
     person = Person("Jojo","Consuelo")
     publication = Publication("Somewhere Over The Rainbow")
     acceptItem(person,publication,libraryHashMap)
 
-
+//2
     person = Person("Jojo","Consuelo")
     publication = Publication("HomoSapiens")
-
     acceptItem(person,publication,libraryHashMap)
 
+//3
     person = Person("Jojo","Consuelo")
     publication = Publication("In Another Life")
-
     acceptItem(person,publication,libraryHashMap)
+//
+////4
+//    person = Person("Jojo","Consuelo")
+//    publication = Publication("Life of Pi")
+//    acceptItem(person,publication,libraryHashMap)
+//
+////5
+//    person = Person("Jojo","Consuelo")
+//    publication = Publication("1984")
+//    acceptItem(person,publication,libraryHashMap)
+//
+//// 6
+//    person = Person("Jojo","Consuelo")
+//    publication = Publication("Day After Tomorrow")
+//
+////    BORROWING LIMIT REACHED
+//    try {
+//        acceptItem(person,publication,libraryHashMap)
+//
+//    }catch (e:Exception){
+//        e.printStackTrace()
+//    }
 
-    person = Person("Jojo","Consuelo")
-    publication = Publication("Life of Pi")
+    person = Person("Annabel", "Rama")
+    publication = Publication("Hitchhiker's Guide to Galaxy")
+    publication.status = PublicationStatus.RESERVED
 
-    acceptItem(person,publication,libraryHashMap)
+    try {
+        acceptItem(person,publication,libraryHashMap)
 
-    person = Person("Jojo","Consuelo")
-    publication = Publication("1984")
+    }catch (e:Exception){
 
-    acceptItem(person,publication,libraryHashMap)
+        e.printStackTrace()
+    }
 
-    person = Person("Jojo","Consuelo")
-    publication = Publication("Day After Tomorrow")
 
-    acceptItem(person,publication,libraryHashMap)
+    person = Person("Annabel", "Rama")
+    publication = Publication("Noli Me Tangere")
+    publication.status = PublicationStatus.FOR_INTERNAL_USE_ONLY
+
+//       INTERNAL USE ONLY
+
+    try {
+        acceptItem(person,publication,libraryHashMap)
+
+    }catch (e:Exception){
+        e.printStackTrace()
+    }
+
+    person = Person("Annabel", "Rama")
+    publication = Publication("Art of War")
+    publication.status = PublicationStatus.FIXING
+
+    try {
+        acceptItem(person,publication,libraryHashMap)
+
+    }catch (e:Exception){
+        e.printStackTrace()
+    }
+
 
     libraryHashMap.forEach { (Person, Publication) -> println("Borrower: ${Person.firstName}, ${Person.lastName} ${Person.status}")
     println("Publication:${Publication.title}, ${Publication.status}")
@@ -185,44 +236,49 @@ fun acceptItem(person: Person,publication: Publication,hashMap: HashMap<Person,P
 
 //    BORROWER REACHED LIMIT
 // new hashmap to contain person names value (count)
-    var countPerson:HashMap<Person,Int> = HashMap()
-    if (person in hashMap){
-        var count = hashMap.count()
-        countPerson.put(person,count)
+    var personRepeatList:ArrayList<String> = ArrayList()
+    var countPerson:HashMap<String,Int> = HashMap()
+    var name = person.fullName()
+    var new = countPerson[name]
 
-    }
-    if (countPerson.containsKey(person)){
-        var compare = countPerson.getValue(person)
-        if (compare >= 6){
-            throw BorrowingPublicationException.BorrowerRestriction.BorrowLimitReached()
+    if(hashMap.keys.equals(name)){
+        if (new != null) {
+            countPerson.put(name, +new)
         }
     }
-//    until here
+    println(countPerson)
+
+//    if (countPerson.containsKey(person.toString())){
+//        var compare = countPerson.getValue(person.toString())
+//        println(compare)
+//        if (compare > 5){
+//            throw BorrowingPublicationException.BorrowerRestriction.BorrowLimitReached()
+//        }
+//    }
 // PUBLICATION RESERVED
-    if (publication.status == PublicationStatus.RESERVED){
-        throw BorrowingPublicationException.LibraryRestrictionException.BookIsReserved()
-    }
+    if (hashMap.containsValue(publication)){
+        if (publication.status == PublicationStatus.RESERVED){
+            throw BorrowingPublicationException.LibraryRestrictionException.BookIsReserved()
+        }
 // PUBLICATION IS BEING FIXED
-    if (publication.status == PublicationStatus.FIXING){
-        throw  BorrowingPublicationException.LibraryRestrictionException.BookIsBeingFixed()
+        if (publication.status == PublicationStatus.FIXING){
+            throw  BorrowingPublicationException.LibraryRestrictionException.BookIsBeingFixed()
+        }
+// PUBLICATION IS FOR INTERNAL USE ONLY
+        if (publication.status == PublicationStatus.FOR_INTERNAL_USE_ONLY){
+            throw BorrowingPublicationException.LibraryRestrictionException.BookIsForInternalUseOnly()
+        }
     }
-//    PUBLICATION IS FOR INTERNAL USE ONLY
-    if (publication.status == PublicationStatus.FOR_INTERNAL_USE_ONLY){
-        throw BorrowingPublicationException.LibraryRestrictionException.BookIsForInternalUseOnly()
-    }
-}
-
-//FUNCTION TO CHECK ACCEPTED ITEMS
-fun checkItems(acceptedItems: HashMap<Person,Publication>){
 
 }
+
 
 //FUNCTION TO REMOVE ITEMS FOR BORROWING
 fun removeItem(person: Person,publication: Publication,hashMap: HashMap<Person,Publication>){
     hashMap.remove(person,publication)
 }
 
-
+//EXCEPTIONS
 sealed class BorrowingPublicationException(message:String):Exception(message){
 
     sealed class BorrowerRestriction(message: String):BorrowingPublicationException(message){
