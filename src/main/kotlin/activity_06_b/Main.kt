@@ -34,9 +34,11 @@ import kotlin.collections.HashMap
 
 fun main() {
     val libraryHashMap:HashMap<Person,Publication> = HashMap()
+    val libraryArray:ArrayList<Person> = ArrayList()
+
 
     var person = Person("Pat","Leones")
-    person.status = Person.BookBorrowerStatus.PAST_DUE
+    person.status = Person.BookBorrowerStatus.UNPAID
     var publication = Publication("Harry Potter and the Sorcerer's Stone")
 
     try {
@@ -60,28 +62,28 @@ fun main() {
     person = Person("Jojo","Consuelo")
     publication = Publication("In Another Life")
     acceptItem(person,publication,libraryHashMap)
-//
-////4
-//    person = Person("Jojo","Consuelo")
-//    publication = Publication("Life of Pi")
-//    acceptItem(person,publication,libraryHashMap)
-//
-////5
-//    person = Person("Jojo","Consuelo")
-//    publication = Publication("1984")
-//    acceptItem(person,publication,libraryHashMap)
-//
-//// 6
-//    person = Person("Jojo","Consuelo")
-//    publication = Publication("Day After Tomorrow")
-//
-////    BORROWING LIMIT REACHED
-//    try {
-//        acceptItem(person,publication,libraryHashMap)
-//
-//    }catch (e:Exception){
-//        e.printStackTrace()
-//    }
+
+//4
+    person = Person("Jojo","Consuelo")
+    publication = Publication("Life of Pi")
+    acceptItem(person,publication,libraryHashMap)
+
+//5
+    person = Person("Jojo","Consuelo")
+    publication = Publication("1984")
+    acceptItem(person,publication,libraryHashMap)
+
+// 6
+    person = Person("Jojo","Consuelo")
+    publication = Publication("Day After Tomorrow")
+
+//    BORROWING LIMIT REACHED
+    try {
+        acceptItem(person,publication,libraryHashMap)
+
+    }catch (e:Exception){
+        e.printStackTrace()
+    }
 
     person = Person("Annabel", "Rama")
     publication = Publication("Hitchhiker's Guide to Galaxy")
@@ -120,10 +122,14 @@ fun main() {
         e.printStackTrace()
     }
 
+    checkLimit(Person("Jojo","Consuelo"),libraryHashMap)
+
 
     libraryHashMap.forEach { (Person, Publication) -> println("Borrower: ${Person.firstName}, ${Person.lastName} ${Person.status}")
     println("Publication:${Publication.title}, ${Publication.status}")
     }
+
+
 
 
 }
@@ -226,7 +232,9 @@ enum class PublicationStatus{
 
 //FUNCTION TO ADD ITEMS
 fun acceptItem(person: Person,publication: Publication,hashMap: HashMap<Person,Publication>){
+
     hashMap.put(person,publication)
+
 
 //    BORROWER EXCEPTION PAST DUE
 
@@ -234,27 +242,20 @@ fun acceptItem(person: Person,publication: Publication,hashMap: HashMap<Person,P
         throw BorrowingPublicationException.BorrowerRestriction.UnpaidDues()
     }
 
+
+
 //    BORROWER REACHED LIMIT
-// new hashmap to contain person names value (count)
-    var personRepeatList:ArrayList<String> = ArrayList()
-    var countPerson:HashMap<String,Int> = HashMap()
-    var name = person.fullName()
-    var new = countPerson[name]
-
-    if(hashMap.keys.equals(name)){
-        if (new != null) {
-            countPerson.put(name, +new)
-        }
+    var newArray:ArrayList<String> = ArrayList()
+    var name =  person.fullName()
+    for(key in hashMap.keys){
+        if (name == key.fullName())
+            newArray.add(name)
     }
-    println(countPerson)
-
-//    if (countPerson.containsKey(person.toString())){
-//        var compare = countPerson.getValue(person.toString())
-//        println(compare)
-//        if (compare > 5){
-//            throw BorrowingPublicationException.BorrowerRestriction.BorrowLimitReached()
-//        }
-//    }
+    println(newArray)
+    println("${ newArray.size }")
+    if (newArray.size > 5){
+        throw BorrowingPublicationException.BorrowerRestriction.BorrowLimitReached()
+    }
 // PUBLICATION RESERVED
     if (hashMap.containsValue(publication)){
         if (publication.status == PublicationStatus.RESERVED){
@@ -276,6 +277,12 @@ fun acceptItem(person: Person,publication: Publication,hashMap: HashMap<Person,P
 //FUNCTION TO REMOVE ITEMS FOR BORROWING
 fun removeItem(person: Person,publication: Publication,hashMap: HashMap<Person,Publication>){
     hashMap.remove(person,publication)
+}
+
+fun checkLimit(person: Person,hashMap: HashMap<Person, Publication>){
+
+
+
 }
 
 //EXCEPTIONS
