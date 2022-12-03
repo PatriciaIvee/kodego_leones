@@ -1,6 +1,7 @@
 package activity_05_d_oop
 
 import mu.KotlinLogging
+import java.util.*
 
 private val logger = KotlinLogging.logger {  }
 /**
@@ -27,9 +28,13 @@ private val logger = KotlinLogging.logger {  }
  * when you get to a ladder you go up
  *
  */
+val snakesAndLaddersBoard = mapOf( 4 to 14,  9 to 31, 17 to  7, 20 to 38, 28 to 84, 40 to 59, 51 to 67, 54 to 34,
+    62 to 19, 63 to 81, 64 to 60, 71 to 91, 87 to 24, 93 to 73, 95 to 75, 99 to 78)
+val random = Random()
 interface MovePlayers{
-    fun moveUp(){}
+    fun goUp(){}
     fun goDown(){}
+    fun random(){}
 }
  abstract class ChangePosition{
 //     abstract fun rollDice(){
@@ -41,45 +46,42 @@ interface MovePlayers{
      abstract fun getPosition():Int
  }
 
-open class Player() :MovePlayers {
-    open var playerName:String = ""
-    open var position:Int = 0
-    override fun moveUp(){}
-
+open class Player(playerNumber: Int, position: Int) :MovePlayers {
+    open var playerName :String = ""
+    open var playerColor  :String = ""
+    open var isBotPlayer = false
+    override fun goUp(){}
     override fun goDown() {}
 }
 
-class BotPlayer():Player(){
+
+class BotPlayer(playerNumber: Int, position: Int):Player(playerNumber, position) {
+    override var isBotPlayer: Boolean
+        get() = super.isBotPlayer
+        set(value) {}
     override var playerName: String = "BOT Player"
-    override fun moveUp(){}
+    override fun goUp(){}
     override fun goDown() {}
 }
 
 open class Snake(){
-    var headOfSnake = 0
-    var tailOfSnake = 0
+   open val mapOfSnakes = mapOf<Int, Int>()
 
+    fun goDown() {}
 //go down is minus
 }
 class Ladder():Snake(){
-//go up is
 
+    override val mapOfSnakes: Map<Int, Int>
+        get() = super.mapOfSnakes
+//    val mapOfLadders = mapOf<Int, Int>()
+    fun goUp(){}
+    //go up is plus
 }
 
 
 
 
 fun main() {
-    val snakesAndLadderBoard =
-        arrayOf(1,2,3,4,5,6,7,8,9,10,
-            11,12,13,14,15,16,17,18,19,20,
-            21,22,23,24,25,26,27,28,29,30,
-            31,32,33,34,35,36,37,38,39,40,
-            41,42,43,44,45,46,47,48,49,50,
-            51,52,53,54,55,56,57,58,59,60,
-            61,62,63,64,65,66,67,68,69,70,
-            71,72,73,74,75,76,77,78,79,80,
-            81,82,83,84,85,86,87,88,89,90,
-            91,92,93,94,95,96,97,98,99,100)
 
 }
