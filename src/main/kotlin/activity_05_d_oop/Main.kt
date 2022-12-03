@@ -1,6 +1,7 @@
 package activity_05_d_oop
 
 import mu.KotlinLogging
+import notes.rollDice
 import java.util.*
 
 private val logger = KotlinLogging.logger {  }
@@ -22,16 +23,20 @@ private val logger = KotlinLogging.logger {  }
  * there should be a dice
  * dice roll function
  * there should be players
- * the board array
- * move function
+ * the board data something
+ * move/turn function and turn again function if the dice is 6
  * when you get to a snake you go down
  * when you get to a ladder you go up
  *
  */
 val snakesAndLaddersBoard = mapOf( 4 to 14,  9 to 31, 17 to  7, 20 to 38, 28 to 84, 40 to 59, 51 to 67, 54 to 34,
     62 to 19, 63 to 81, 64 to 60, 71 to 91, 87 to 24, 93 to 73, 95 to 75, 99 to 78)
-val random = Random()
+
 interface MovePlayers{
+    fun rollDice(): Int {
+        return (1..6).random()
+
+    }
     fun goUp(){}
     fun goDown(){}
     fun random(){}
@@ -45,6 +50,13 @@ interface MovePlayers{
      abstract fun rollDice():Int
      abstract fun getPosition():Int
  }
+
+class RollAgain:MovePlayers {
+    override fun rollDice(): Int {
+        return super.rollDice()
+    }
+
+}
 
 open class Player(playerNumber: Int, position: Int) :MovePlayers {
     open var playerName :String = ""

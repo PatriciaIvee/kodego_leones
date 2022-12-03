@@ -183,7 +183,7 @@ class Cart {
         items.remove(product,quantity)
     }
 
-    fun checkOutCart(){
+    fun checkOutCart(): Double {
 
         items.forEach{(key, value) ->
             var price = key.productPrice * value
@@ -192,6 +192,8 @@ class Cart {
         }
 
         logger.info { "Total Price : ${itemsTotal.values.sum()}" }
+
+        return itemsTotal.values.sum()
     }
 
     data class Customer(var address: String,

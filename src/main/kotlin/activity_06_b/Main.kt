@@ -235,7 +235,6 @@ fun acceptItem(person: Person,publication: Publication,hashMap: HashMap<Person,P
 
     hashMap.put(person,publication)
 
-
 //    BORROWER EXCEPTION PAST DUE
 
     if (person.status == Person.BookBorrowerStatus.PAST_DUE){
@@ -275,8 +274,9 @@ fun acceptItem(person: Person,publication: Publication,hashMap: HashMap<Person,P
 
 
 //FUNCTION TO REMOVE ITEMS FOR BORROWING
-fun removeItem(person: Person,publication: Publication,hashMap: HashMap<Person,Publication>){
+fun removeItem(person: Person,publication: Publication,hashMap: HashMap<Person,Publication>): HashMap<Person, Publication> {
     hashMap.remove(person,publication)
+    return hashMap
 }
 
 fun checkLimit(person: Person,hashMap: HashMap<Person, Publication>){
