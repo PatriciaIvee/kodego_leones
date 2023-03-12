@@ -28,36 +28,60 @@ private val logger = KotlinLogging.logger {  }
  * when you get to a ladder you go up
  *
  */
-val snakesAndLaddersBoard = mapOf(
-    4 to 14, 9 to 31, 17 to 7, 20 to 38, 28 to 84,
-    40 to 59, 51 to 67, 54 to 34, 62 to 19, 63 to 81,
-    64 to 60, 71 to 91, 87 to 24, 93 to 73, 95 to 75,
-    99 to 78)
+
+
+open class Player(var playerNumber: Int, var position: Int) : MovePlayers {
+    open var playerName: String = ""
+    open var playerColor: String = ""
+    open var isBotPlayer = false
+
+    override fun goUp() {}
+    override fun goDown() {}
+
+    fun movePlayer(numberOfSpaces: Int) {
+        position += numberOfSpaces
+    }
+
+    fun hasWon(): Boolean {
+        return position > 100 || position == 100
+    }
+}
+abstract class ChangePosition {
+    abstract fun movePlayerOnBoard(player: Player, numberOfSpaces: Int)
+    open fun rollDice(): Int {
+        return (1..6).random()
+    }
+}
+class RollAgain : ChangePosition() {
+    override fun rollDice(): Int {
+        val roll = super.rollDice()
+        if (roll == 6) {
+            logger.info{"You rolled a 6! Roll again."}
+            val nextRoll = rollDice()
+            logger.info{"For the second time you rolled $nextRoll"}
+            logger.info{"$roll + $nextRoll"}
+            return roll + nextRoll
+        }
+
+        return roll
+    }
+
+    override fun movePlayerOnBoard(player: Player, numberOfSpaces: Int) {
+        player.movePlayer(numberOfSpaces)
+    }
+}
 
 interface MovePlayers{
     fun rollDice(): Int {
         return (1..6).random()
-
     }
+
     fun goUp(){}
     fun goDown(){}
-    fun random(){}
 }
- abstract class ChangePosition{
-//     abstract fun rollDice(){
-//         val randomNumber =(1..6).random()
-////        generate random numbers
-//         logger.info{"Move $randomNumber place/s"}
-//     }
-     abstract fun rollDice():Int
-     abstract fun getPosition():Int
- }
 
-class RollAgain:MovePlayers {
-    override fun rollDice(): Int {
-        return super.rollDice()
-    }
-}
+
+
 fun addPlayer(player: Player): ArrayList<Player> {
     var playersList :ArrayList<Player> = ArrayList()
     playersList.add(player)
@@ -68,13 +92,6 @@ fun removePlayer(player: Player): ArrayList<Player> {
     var playersList :ArrayList<Player> = ArrayList()
     playersList.remove(player)
     return playersList
-}
-open class Player(playerNumber: Int, position: Int) :MovePlayers {
-    open var playerName :String = ""
-    open var playerColor :String = ""
-    open var isBotPlayer = false
-    override fun goUp(){}
-    override fun goDown() {}
 }
 
 class BotPlayer(playerNumber: Int, position: Int):Player(playerNumber, position) {
@@ -87,40 +104,86 @@ class BotPlayer(playerNumber: Int, position: Int):Player(playerNumber, position)
     override fun goDown() {}
 }
 
-open class Snake(){
-//    Go Down
-   private val mapOfSnakes = mapOf<Int, Int>(16 to 6, 47 to 26, 49 to 11, 56 to 53, 62 to 19,
-    64 to 60, 87 to 24, 93 to 73, 95 to 75, 98 to 78,)
 
-    open fun move(player: Player, position: Int) {
-        for (number in mapOfSnakes.keys){
-            if (position == number){
-               val newPosition = mapOfSnakes.getValue(number)
-                return move(player,newPosition)
-            }
-        }
+class Snakes(private val board: Array<IntArray>) {
+
+    private val snakes = mapOf(
+        16 to 6, 47 to 26, 49 to 11, 56 to 53, 62 to 19,
+        64 to 60, 87 to 24, 93 to 73, 95 to 75, 98 to 78,
+    )
+
+    fun moveDown(player: Player, position: Int) {
+        val snakeTail = snakes[position] ?: return // check if there's a snake at this position
+        player.position = snakeTail
+        logger.info {"Landed on A Snake ! Move to Position $snakeTail" }
+    }
+}
+
+class Ladders(private val board: Array<IntArray>): MovePlayers{
+
+    private val ladders = mapOf(
+        1 to 38, 4 to 14, 9 to 31, 21 to 42,
+        28 to 84, 36 to 44, 51 to 67, 71 to 91, 80 to 100,
+    )
+
+    fun moveUp(player: Player, position: Int) {
+
+        val ladderTop = ladders[position] ?: return // check if there's a ladder at this position
+        player.position = ladderTop
+        logger.info { "Landed on A Ladder! Move to Position $ladderTop"  }
 
     }
 }
-class Ladder():Snake(){
-//    Go Up
-
-   private var mapOfLadders = mapOf<Int,Int>(1 to 38, 4 to 14, 9 to 31, 21 to 42,
-       28 to 84, 36 to 44, 51 to 67, 71 to 91, 80 to 100)
-    override fun move(player: Player, position: Int) {
-        for (number in mapOfLadders.keys){
-            if (position == number) {
-                val newPosition = mapOfLadders.getValue(number)
-                return move(player, newPosition)
-            }
-        }
-    }
-
-}
-
-
 
 
 fun main() {
+    addPlayer(Player(1,0))
+    addPlayer(Player(2,0))
+    // Create the game board
+    val snakesAndLaddersBoardArray = Array(10) { row ->
+        IntArray(10) { column -> row * 10 + column + 1 }
+    }
+    //  Create an Array of 10
+    //row * 10 determines that what numbers are inside each row since its multiple of 10
+    // column + 1 Column Start at one Then Column number value will increment until it reaches the end of row
 
+
+
+    // Create the players
+    val players = listOf(Player(1, 0), Player(2, 0))
+
+    // Create the game components
+    val rollAgain = RollAgain()
+    val snakes = Snakes(snakesAndLaddersBoardArray)
+    val ladders = Ladders(snakesAndLaddersBoardArray)
+
+    // Game loop
+    while (true) {
+        for (player in players) {
+            logger.info { "Player ${player.playerNumber}'s turn" }
+
+            // Roll the dice
+            val roll = rollAgain.rollDice()
+            logger.info {"Rolled a $roll"}
+
+            // Move the player
+            val newPosition = player.position + roll
+            if (newPosition > 100) {
+                logger.info { "You need to roll a ${100 - player.position} or less to reach the end" }
+            } else {
+                player.position = newPosition
+                logger.info { "Moved to position ${player.position}" }
+
+                // Check if the player landed on a snake or ladder
+                snakes.moveDown(player, player.position)
+                ladders.moveUp(player, player.position)
+
+                // Check if the player won
+                if (player.hasWon()) {
+                    logger.info { "Player ${player.playerNumber} has won!" }
+                    return
+                }
+            }
+        }
+    }
 }
