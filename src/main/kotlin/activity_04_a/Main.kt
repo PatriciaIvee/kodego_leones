@@ -1,6 +1,7 @@
 package activity_04_a
 
 import mu.KotlinLogging
+import java.util.*
 
 import kotlin.collections.ArrayList
 
@@ -36,9 +37,10 @@ fun main() {
 
     logger.info{"Student names: "}
     for(student in studentNames){
-        println("Student:${student.fullName()}")
+        logger.info{"Student:${student.fullName()}"}
     }
 
+    logger.info{"Student Wild Search"}
     wildSearch("pat",studentNames)
 
 
@@ -73,9 +75,9 @@ fun wildSearch(name: String, studentArray: ArrayList<Student>) {
         }
     }
 
-    println("Search Results:")
+    logger.info { "Search Results:" }
     for(student in searchResults){
-       println(student)
+       logger.info { student }
     }
 
 }
