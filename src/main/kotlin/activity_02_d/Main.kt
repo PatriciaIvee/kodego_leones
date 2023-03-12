@@ -35,14 +35,14 @@ fun main() {
         }
         ++i
     }
-    logger.info { "The sum is : $ints" }
+    logger.info { "The numbers are : $ints" }
     val sum = ints.sum()
-    logger.info{ sum }
+    logger.info{"The sum is $sum" }
 
     while (i <= 6 ) {
-
+        logger.info { "Type an integer as the divisor." }
         val userInputDivisor = readLine()
-        logger.info { "Input divisor $userInputDivisor" }
+        logger.info { "You Typed $userInputDivisor as the divisor." }
 
         if (userInputDivisor != null && userInputDivisor.all { char -> char.isDigit() } ) {
             val userInputInt = userInputDivisor.toIntOrNull()
@@ -77,7 +77,7 @@ fun main() {
     }
     logger.info { "Sum of $intArray" }
     val sumOfIntArray = intArray.sum()
-
+    logger.info { "Sum is $sumOfIntArray" }
     logger.info{ "Enter one more number to divide the last 5 digit inputs"}
 
     do{
