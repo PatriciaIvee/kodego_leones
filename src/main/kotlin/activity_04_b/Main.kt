@@ -38,7 +38,7 @@ private val logger = KotlinLogging.logger {  }
 
 
 open class ReadingMaterial(){
-//    class that will be inherited sa book, Magazine ,etc.
+//    class that will be inherited to book, Magazine ,etc.
 }
 
 class Book {
@@ -132,9 +132,9 @@ fun wildSearchBook(name: String, readingMaterial: ArrayList<Book>,) {
         }
     }
 
-    println("Search Results:")
+    logger.info { "Wild Search Book Results: " }
     for(result in searchResults){
-       println(result)
+       logger.info { result }
     }
 
 }
@@ -153,9 +153,9 @@ fun wildSearchMagazine(name: String, readingMaterial: ArrayList<Magazine>,) {
         }
     }
 
-    println("Search Results:")
+    logger.info { "Wild Search Magazine Results: " }
     for(result in searchResults){
-        println(result)
+        logger.info { result }
     }
 
 }
@@ -174,9 +174,9 @@ fun wildSearchNewspaper(name: String, readingMaterial: ArrayList<Newspaper>) {
         }
     }
 
-    println("Search Results:")
+    logger.info { "Wild Search Newspaper Results: " }
     for(result in searchResults){
-        println(result)
+        logger.info { result }
     }
 
 }
@@ -195,9 +195,9 @@ fun wildSearchComics(name: String, readingMaterial: ArrayList<Comics>,) {
         }
     }
 
-    println("Search Results:")
+    logger.info { "Wild Search Comics Result: " }
     for(result in searchResults){
-        println(result)
+        logger.info { result }
     }
 
 }
