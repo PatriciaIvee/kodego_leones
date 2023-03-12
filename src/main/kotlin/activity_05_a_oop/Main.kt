@@ -41,23 +41,29 @@ fun main() {
 
     val population: ArrayList<Person> = ArrayList()
 
+
+    //    Student 1
     var person: Person = Student("Janreign","Aragon")
-
     var student1:Student = person as Student
-    //    student1.status = Status.ONGOING
+    student1.status = Status.ONGOING
     population.add(person)
 
+
+    //    Student 2
     person = Student("Jani","Arcena")
-//    student1.status = Status.SHIFTED
+    student1 = person as Student
+    student1.status = Status.SHIFTED
     population.add(person)
 
+
+    //    Student 3
     person = Student("Jose", "Santos")
-//    student1.status = Status.WILL_BEGIN
-//    Status will_begin now becomes  Janreign's status,  jani and Jose's status becomes unknown
+    student1 = person as Student
+    student1.status = Status.WILL_BEGIN
     population.add(person)
 
 
-//    Student 1
+    //    Cert Student 1
     person = CertificateStudent("Manny", "Pacquiao")
     var certStudent:CertificateStudent = person
     certStudent.shortCoursesList.add("Computer Technician")
@@ -65,7 +71,7 @@ fun main() {
     certStudent.shortCoursesList.add("Electrical Technician")
     population.add(person)
 
-//    Student 2
+    //    Cert Student 2
     person = CertificateStudent("Arturo", "Buenavista")
     certStudent = person
     certStudent.shortCoursesList.add("Public Speaking")
@@ -73,6 +79,7 @@ fun main() {
     certStudent.shortCoursesList.add("Advertising Article")
     population.add(person)
 
+    //    Undergrad Student 1
     person = UnderGraduateStudent("Pat","Leones")
     var undergrad:UnderGraduateStudent = person
     undergrad.collegeSchoolOf.add("College of Engineering")
@@ -80,10 +87,11 @@ fun main() {
     undergrad.yearEnrolled = 2020
     undergrad.yearEnd = 2022
     undergrad.status = Status.GRADUATED
-//    why it prints ongoing for both entries?
 
     population.add(person)
 
+
+    //    Undergrad Student 2
     person = UnderGraduateStudent("Hannah","Montana")
     undergrad = person
     undergrad.collegeSchoolOf.add("College of Music and Performing Arts")
@@ -92,13 +100,13 @@ fun main() {
 
     population.add(person)
 
+    //    Master Student 1
     person = MasterStudent("Mac","Valmores")
     population.add(person)
 
+    //    Graduate Student 1
     person = GraduateStudent("Juan Ponce", "Enrile")
     population.add(person)
-
-
 
 
 
@@ -108,43 +116,50 @@ fun main() {
 
         when (individual) {
             is Student -> {
-                println("Student:${individual.fullName()}")
+                logger.info{"Student:${individual.fullName()}"}
                 val student = individual as Student
-                println("Status :${student.status}")
+                logger.info{"Status :${student.status}"}
             }
 
             is CertificateStudent -> {
-                println("Certificate Student:${individual.fullName()}")
+                logger.info{"Certificate Student:${individual.fullName()}"}
                 val certificateStudent = individual as CertificateStudent
-                logger.info{"Certificates taken"}
+                logger.info{"Certificates taken:"}
                 for (cert in certificateStudent.shortCoursesList) {
-                    println(cert)
+                    logger.info{cert}
                 }
 
             }
 
             is UnderGraduateStudent -> {
-                println("Undergraduate Student:${individual.fullName()}")
+                logger.info{"Undergraduate Student:${individual.fullName()}"}
                 val underGraduateStudent = individual as UnderGraduateStudent
                 logger.info { "School:" }
                 for (department in underGraduateStudent.collegeSchoolOf){
-                    println(department)
+                    logger.info{department}
                 }
                 logger.info { "Degree:" }
                 for (degree in underGraduateStudent.degreesTakenOrTakingList){
-                    println(degree)
+                    logger.info{degree}
                 }
-                println("Year enrolled:${ underGraduateStudent.yearEnrolled }")
-                println("Year end:${underGraduateStudent.yearEnd}")
-                println("Status :${underGraduateStudent.status}")
+                logger.info{"Year enrolled:${ underGraduateStudent.yearEnrolled }"}
+                logger.info{"Year end:${underGraduateStudent.yearEnd}"}
+                logger.info{"Status :${underGraduateStudent.status}"}
             }
 
             is MasterStudent -> {
-                println("Teacher:${individual.fullName()}")
+                logger.info{"Master Student:${individual.fullName()}"}
+                logger.info{"Year Enrolled:${individual.yearEnrolled}"}
+                logger.info{"Year End:${individual.yearEnd}"}
+                logger.info{"Degree:${individual.degree}"}
+
             }
 
             is GraduateStudent -> {
-                println("Graduate Student:${individual.fullName()}")
+                logger.info{"Graduate Student:${individual.fullName()}"}
+                logger.info{"Year Enrolled:${individual.yearEnrolled}"}
+                logger.info{"Year End:${individual.yearEnd}"}
+                logger.info{"Degree:${individual.degree}"}
             }
 
             else ->
