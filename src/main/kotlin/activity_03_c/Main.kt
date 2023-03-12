@@ -52,40 +52,81 @@ fun main() {
     val cart:HashMap<String,Int> = HashMap()
     val cartArray:ArrayList<String> = ArrayList()
 
-    addToCart(cart,cartArray)
-    addToCart(cart,cartArray)
-    addToCart(cart,cartArray)
+    addItemsToCart(cart,cartArray)
 
-    removeFromCart(cart)
+//    logger.info { "Add Item in Cart" }
+//    logger.info { "First Add the Item then Add How Many you need." }
+//    addToCart(cart,cartArray)
+//    logger.info { "Add Item in Cart" }
+//    logger.info { "First Add the Item then Add How Many you need." }
+//    addToCart(cart,cartArray)
+//    logger.info { "Add Item in Cart" }
+//    logger.info { "First Add the Item then Add How Many you need." }
+//    addToCart(cart,cartArray)
+
+    removeItemsToCart(cart,cartArray)
+
+//    logger.info { "Remove Item in Cart" }
+//    removeFromCart(cart)
+
+    logger.info { "Checking Out Items in Cart" }
     checkOut(cart)
 
 
 }
 
-fun addToCart(cartHashmap: HashMap<String,Int> = HashMap(),
-              array: ArrayList<String> = ArrayList(),
-              item: String = readln(),
-              amount: Int = readln().toInt()
-               ){
-
-    val countArray = array.count{it == item}
-    array.add(item)
-
-    if (cartHashmap.containsKey(item)){
-        cartHashmap[item + countArray] = amount
-    } else{
-        cartHashmap[item] = amount
+    fun addItemsToCart(cart: HashMap<String, Int>, cartArray: ArrayList<String>) {
+        var continueAdding = true
+        while (continueAdding) {
+            logger.info { "Add Item in Cart" }
+            logger.info { "First Add the Item then Add How Many you need." }
+            addToCart(cart, cartArray)
+            logger.info { "Do you want to add more items? (Y/N)" }
+            val answer = readLine().orEmpty().trim().toUpperCase()
+            continueAdding = answer == "Y"
+        }
     }
 
-}
+    fun addToCart(cartHashmap: HashMap<String,Int> = HashMap(),
+                  array: ArrayList<String> = ArrayList(),
+                  item: String = readln(),
+                  amount: Int = readln().toInt()
+                   ){
 
-fun checkOut(cartHashmap: HashMap<String, Int>){
-    cartHashmap.forEach{ (key, value) -> logger.info {"Item:$key, amount: $value" }  }
-    logger.info { "total Amount : ${cartHashmap.values.sum()}" }
-}
+        val countArray = array.count{it == item}
+        array.add(item)
 
-fun removeFromCart (cartHashmap: HashMap<String, Int> = HashMap(),item: String = readln()){
-    if (cartHashmap.containsKey(item)){
-        cartHashmap.remove(item)
+        if (cartHashmap.containsKey(item)){
+            cartHashmap[item + countArray] = amount
+        } else{
+            cartHashmap[item] = amount
+        }
+
+        logger.info("Item added to cart: $item, Amount: $amount")
     }
-}
+
+    fun checkOut(cartHashmap: HashMap<String, Int>){
+        cartHashmap.forEach{ (key, value) -> logger.info {"Item:$key, amount: $value" }  }
+        logger.info { "total Amount : ${cartHashmap.values.sum()}" }
+    }
+
+    fun removeFromCart (cartHashmap: HashMap<String, Int> = HashMap(),item: String = readln()){
+        if (cartHashmap.containsKey(item)){
+            cartHashmap.remove(item)
+        }else{
+            logger.info { "Item Doesn't Exist In the List." }
+        }
+
+    }
+
+    fun removeItemsToCart(cart: HashMap<String, Int>, cartArray: ArrayList<String>) {
+        var continueRemoving = true
+        while (continueRemoving) {
+            logger.info { "Remove Item in Cart" }
+            logger.info { "First Add the Item then Add How Many you need." }
+            addToCart(cart, cartArray)
+            logger.info { "Do you want to remove more items? (Y/N)" }
+            val answer = readLine().orEmpty().trim().toUpperCase()
+            continueRemoving = answer == "Y"
+        }
+    }
