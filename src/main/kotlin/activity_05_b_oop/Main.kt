@@ -87,6 +87,6 @@ enum class AudioVideoMaterialCategory{
     UNSPECIFIED
 }
 
-fun search(){}
-fun addMaterial(){}
-fun remove(){}
+fun searchPublication(){}
+fun addPublication(){}
+fun removePublication(){}
