@@ -165,9 +165,6 @@ fun main() {
     // column + 1 Column Start at one Then Column number value will increment until it reaches the end of row
 
 
-
-
-
     // Create the game components
     val rollAgain = RollAgain()
     val snakes = Snakes(snakesAndLaddersBoardArray)
@@ -175,28 +172,28 @@ fun main() {
 
     // Game loop
     while (true) {
-        for (player in playerList) {
-            logger.info { "Player ${player.playerNumber} (${player.playerName})'s turn" }
+        for (participant in playerList) {
+            logger.info { "Player ${participant.playerNumber} (${participant.playerName})'s turn" }
 
             // Roll the dice
             val roll = rollAgain.rollDice()
             logger.info {"Rolled a $roll"}
 
             // Move the player
-            val newPosition = player.position + roll
+            val newPosition = participant.position + roll
             if (newPosition > 100) {
-                logger.info { "You need to roll a ${100 - player.position} or less to reach the end" }
+                logger.info { "You need to roll a ${100 - participant.position} (${participant.playerName}) or less to reach the end" }
             } else {
-                player.position = newPosition
-                logger.info { "Moved to position ${player.position}" }
+                participant.position = newPosition
+                logger.info { "Moved to position ${participant.position}" }
 
                 // Check if the player landed on a snake or ladder
-                snakes.moveDown(player, player.position)
-                ladders.moveUp(player, player.position)
+                snakes.moveDown(participant, participant.position)
+                ladders.moveUp(participant, participant.position)
 
                 // Check if the player won
-                if (player.hasWon()) {
-                    logger.info { "Player ${player.playerNumber} has won!" }
+                if (participant.hasWon()) {
+                    logger.info { "Player ${participant.playerNumber} (${participant.playerName}) has won!" }
                     return
                 }
             }
