@@ -80,19 +80,21 @@ interface MovePlayers{
     fun goDown(){}
 }
 
-
-
-fun addPlayer(player: Player): ArrayList<Player> {
-    var playersList :ArrayList<Player> = ArrayList()
-    playersList.add(player)
+fun addPlayer(playersList: ArrayList<Player>, newPlayer: Player): ArrayList<Player> {
+    playersList.add(newPlayer)
     return playersList
 }
 
-fun removePlayer(player: Player): ArrayList<Player> {
-    var playersList :ArrayList<Player> = ArrayList()
-    playersList.remove(player)
+fun removePlayer(playersList: ArrayList<Player>, playerToRemove: Player): ArrayList<Player> {
+    playersList.remove(playerToRemove)
     return playersList
 }
+
+//fun removePlayer(player: Player): ArrayList<Player> {
+//    var playersList :ArrayList<Player> = ArrayList()
+//    playersList.remove(player)
+//    return playersList
+//}
 
 class BotPlayer(playerNumber: Int, position: Int):Player(playerNumber, position) {
 
@@ -137,8 +139,23 @@ class Ladders(private val board: Array<IntArray>): MovePlayers{
 
 
 fun main() {
-    addPlayer(Player(1,0))
-    addPlayer(Player(2,0))
+    var playerList: ArrayList<Player> = ArrayList()
+
+    // Add Players
+    var player = Player(1, 0)
+    player.playerName = "Joanna"
+    player.playerColor = "Blue"
+    addPlayer(playerList,player)
+
+    player = Player(2,0)
+    player.playerName = "Hannah"
+    player.playerColor = "Red"
+    addPlayer(playerList, player)
+
+    player = BotPlayer(3,0)
+    player.playerColor = "Orange"
+    addPlayer(playerList, player)
+
     // Create the game board
     val snakesAndLaddersBoardArray = Array(10) { row ->
         IntArray(10) { column -> row * 10 + column + 1 }
@@ -149,8 +166,7 @@ fun main() {
 
 
 
-    // Create the players
-    val players = listOf(Player(1, 0), Player(2, 0))
+
 
     // Create the game components
     val rollAgain = RollAgain()
@@ -159,8 +175,8 @@ fun main() {
 
     // Game loop
     while (true) {
-        for (player in players) {
-            logger.info { "Player ${player.playerNumber}'s turn" }
+        for (player in playerList) {
+            logger.info { "Player ${player.playerNumber} (${player.playerName})'s turn" }
 
             // Roll the dice
             val roll = rollAgain.rollDice()
