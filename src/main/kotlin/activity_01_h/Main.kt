@@ -43,19 +43,62 @@ fun main() {
     logger.info { "Welcome to Activity 01 H 1st solution" }
     logger.info { "Input number1 " }
     val integerRange:IntRange
-    val inputInt1 = readln().toInt()
+    var inputInt1 = readln().toInt()
     logger.info { "Input number2" }
-    val inputInt2 = readln().toInt()
+    var inputInt2 = readln().toInt()
     integerRange = if (inputInt1 < inputInt2){
 //        logger.info { "condition 1 $inputInt2 is greater than $inputInt1" }
         inputInt1..inputInt2
     }   else {
 //        logger.info { "condition 2 $inputInt1 is greater than $inputInt2" }
 //        switches the range start and end
-        inputInt2..inputInt1
+
+       inputInt2..inputInt1
     }
     logger.info { "Prime numbers from $integerRange" }
+
+
     for (i in integerRange){
+        //Condition If integerRange is Switch
+        // (user typed a higher value for input 1 and lower value for input 2)
+        // and the range is out of the arraylist
+        //So that it won't compute if it's within the arraylist (prime numbers of the range)
+        if (inputInt2 < inputInt1 && i !in primeNumberArray){
+            var notPrimeNumber = false
+//        condition if is not a prime number
+            for (number in 2..i / 2) {
+//            number will move 2 places start range then /2
+                if (i % number == 0) {
+//                if the input2 Start is equal to 0 when divided by 2 no  remainder
+                    notPrimeNumber = true
+                    break
+                }
+            }
+            if (!notPrimeNumber) {
+                logger.info("Prime number : $inputInt2")
+//            will print the number if it is a prime number
+            }
+            ++inputInt2
+
+          // Condition if the values are switched up and when the numbers of the given range is beyond the
+          // prime numbers in the arraylist
+        } else if (i !in primeNumberArray){
+            var notPrimeNumber = false
+//        condition if is not a prime number
+            for (number in 2..i / 2) {
+//            number will move 2 places start range then /2
+                if (i % number == 0) {
+//                if the input1 Start is equal to 0 when divided by 2 no  remainder
+                    notPrimeNumber = true
+                    break
+                }
+            }
+            if (!notPrimeNumber) {
+                logger.info("Prime number : $inputInt1")
+//            will print the number if it is a prime number
+            }
+            ++inputInt1
+        }
         if(i in primeNumberArray){
            logger.info { i }
 //            Range only valid until 1223
