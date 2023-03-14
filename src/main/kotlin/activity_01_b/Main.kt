@@ -19,7 +19,7 @@ fun main() {
 //    Status if item is borrowed or available
     var borrowed : Boolean = false
     var available : Boolean = false
-    var dateBorrowed: Date
+    var dateBorrowed: Date //DateTime
     var returnDate : Date
     var returned : Boolean = false
     var lost : Boolean = false
